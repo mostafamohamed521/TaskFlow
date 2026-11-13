@@ -1,0 +1,253 @@
+/* ========================================
+   AUTH + ONBOARDING RESPONSIVE RULES
+   Desktop keeps the approved split layout.
+   Tablet narrows the brand panel.
+   Mobile switches to one column with a compact
+   logo header.
+======================================== */
+
+/* Large laptops (1280-1440) */
+@media (max-width: 1440px) {
+    .tf-auth__panel {
+        padding-right: 3rem;
+    }
+
+    .tf-brand__mark {
+        height: 6rem;
+    }
+
+    .tf-brand__name {
+        font-size: 2.7rem;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1100px) {
+    .tf-auth {
+        --tf-brand-width: 36%;
+        --tf-edge-offset: 4.5rem;
+    }
+
+    .tf-auth--split {
+        --tf-brand-width: 42%;
+        --tf-edge-offset: 0px;
+    }
+
+    .tf-auth__panel {
+        padding: 2.5rem 2.25rem 2.5rem calc(var(--tf-edge-offset) + 1.75rem);
+    }
+
+    .tf-auth__brand {
+        padding-left: 2.5rem;
+    }
+
+    .tf-auth--split .tf-auth__brand {
+        padding-left: 2.5rem;
+    }
+}
+
+/* Tablet portrait and below: single column */
+@media (max-width: 860px) {
+    .tf-auth,
+    .tf-auth--split {
+        --tf-edge-offset: 0px;
+
+        grid-template-columns: 1fr;
+
+        background-color: var(--tf-panel-bg);
+    }
+
+    .tf-auth__brand,
+    .tf-auth--split .tf-auth__brand {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding: 1.25rem 1.5rem;
+    }
+
+    .tf-auth__brand::before,
+    .tf-auth__brand::after,
+    .tf-auth__brand-copy,
+    .tf-auth__illustration {
+        display: none;
+    }
+
+    .tf-brand {
+        gap: 0.75rem;
+    }
+
+    .tf-brand__mark {
+        height: 3.25rem;
+    }
+
+    .tf-brand__name {
+        font-size: 1.9rem;
+    }
+
+    .tf-brand__tagline {
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+    }
+
+    .tf-auth__panel {
+        margin-left: 0;
+        padding: 2rem 1.5rem 3rem;
+
+        border-radius: 0;
+    }
+
+    .tf-auth__content {
+        margin: 0 auto;
+    }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+    .tf-auth__panel {
+        padding: 1.5rem 1.125rem 2.5rem;
+    }
+
+    .tf-brand__tagline {
+        display: none;
+    }
+
+    .tf-auth-tabs {
+        margin-bottom: 1.75rem;
+    }
+
+    .tf-auth-tabs__link {
+        min-height: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .tf-input,
+    .tf-login-form .tf-input,
+    .tf-recovery .tf-input {
+        min-height: 3.5rem;
+        font-size: 1.1rem;
+    }
+
+    .tf-input-wrap__icon {
+        left: 1.125rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .tf-input-wrap__icon + .tf-input {
+        padding-left: 3.625rem;
+    }
+
+    .tf-stacked .tf-input {
+        padding-left: 4rem;
+    }
+
+    .tf-stacked__label {
+        left: 4rem;
+    }
+
+    .tf-stacked .tf-input-wrap__icon {
+        left: 1.125rem;
+    }
+
+    .tf-button,
+    .tf-login-form .tf-button,
+    .tf-recovery .tf-button--primary,
+    .tf-status-page .tf-button--block {
+        min-height: 3.5rem;
+        font-size: 1.2rem;
+    }
+
+    .tf-auth__divider {
+        margin: 1.75rem 0 1.375rem;
+    }
+
+    .tf-socials {
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+        padding: 0;
+    }
+
+    .tf-strength {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .tf-strength__bars {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .tf-requirements {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tf-status-icon,
+    .tf-recovery .tf-status-icon,
+    .tf-recovery--reset .tf-status-icon {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .tf-status-icon svg,
+    .tf-recovery .tf-status-icon svg {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .tf-status-icon--success img {
+        width: 10.625rem;
+    }
+
+    .tf-status-page__text br,
+    .tf-auth__subtitle br,
+    .tf-verify__text br {
+        display: none;
+    }
+
+    .tf-status-page__actions,
+    .tf-invite__actions,
+    .tf-invite-card__columns {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-email-chip {
+        max-width: 100%;
+        padding: 0.75rem 1.125rem;
+
+        font-size: 1.1rem;
+        word-break: break-all;
+    }
+
+    .tf-verify__resend {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .tf-info-card {
+        gap: 1rem;
+        padding: 1.125rem;
+    }
+
+    .tf-invite-card {
+        padding: 1.25rem 1.125rem;
+    }
+
+    .tf-invite-card__details > div {
+        grid-template-columns: 1fr;
+        gap: 0.375rem;
+    }
+
+    .tf-invite-card__head {
+        flex-wrap: wrap;
+    }
+
+    .tf-invite-card__head .tf-badge {
+        margin-left: 0;
+    }
+
+    .tf-form__grid {
+        grid-template-columns: 1fr;
+    }
+}
