@@ -1,0 +1,176 @@
+/* ========================================
+   ONBOARDING RESPONSIVE RULES
+   Desktop: approved rail + content layout.
+   Tablet: narrower rail, preview and roles stack.
+   Mobile: compact logo header, single column,
+   numbered stepper without labels.
+======================================== */
+
+/* Small laptops */
+@media (max-width: 1280px) {
+    .tf-auth--onboarding {
+        --tf-brand-width: 24%;
+    }
+
+    .tf-auth--onboarding .tf-auth__brand-copy {
+        margin-bottom: 6rem;
+    }
+
+    .tf-workspace-layout {
+        gap: 1.375rem;
+    }
+
+    .tf-workspace-layout__fields {
+        padding-right: 1.375rem;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1100px) {
+    .tf-auth--onboarding {
+        --tf-brand-width: 22%;
+        --tf-edge-offset: 2rem;
+    }
+
+    .tf-auth--onboarding .tf-auth__panel {
+        padding: 2rem 2rem 2rem calc(var(--tf-edge-offset) + 1.5rem);
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 860px) {
+    .tf-auth--onboarding .tf-auth__panel {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .tf-stepper__label {
+        font-size: 0.85rem;
+    }
+
+    .tf-workspace-layout,
+    .tf-invite-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-workspace-layout__fields {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .tf-type-grid,
+    .tf-feature-grid,
+    .tf-workspace-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+    }
+
+    .tf-workspace-summary__item:nth-child(3) {
+        border-left: 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+    .tf-auth--onboarding .tf-auth__panel {
+        padding: 1.5rem 1.125rem 2.5rem;
+    }
+
+    /* Labels hide; numbers + aria-current still mark the step. */
+    .tf-stepper__label {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .tf-stepper__marker {
+        width: 2.375rem;
+        height: 2.375rem;
+
+        font-size: 1rem;
+    }
+
+    .tf-stepper__step:not(:last-child)::after {
+        top: 1.125rem;
+        left: calc(50% + 1.375rem);
+
+        width: calc(100% - 2.75rem);
+    }
+
+    .tf-type-grid,
+    .tf-feature-grid,
+    .tf-workspace-summary,
+    .tf-workspace-layout .tf-form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-workspace-summary__item + .tf-workspace-summary__item {
+        border-left: 0;
+        border-top: 1px solid var(--tf-border-soft);
+        padding-top: 0.75rem;
+    }
+
+    .tf-type-card {
+        min-height: 0;
+        padding: 1.375rem 1rem 4rem;
+    }
+
+    .tf-type-card__text br,
+    .tf-feature-card__text br,
+    .tf-onboarding .tf-auth__subtitle br {
+        display: none;
+    }
+
+    .tf-invite-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .tf-invite-row > .tf-field:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .tf-invite-row > .tf-icon-button {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .tf-card--row {
+        align-items: flex-start;
+    }
+
+    .tf-onboarding__footer {
+        flex-wrap: wrap;
+        gap: 0.875rem;
+    }
+
+    .tf-onboarding__footer .tf-button--primary {
+        order: -1;
+
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .tf-onboarding__footnote,
+    .tf-onboarding__skip {
+        margin-left: auto;
+    }
+
+    .tf-preview__head {
+        gap: 0.875rem;
+    }
+
+    .tf-preview__logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .tf-onboarding__finish .tf-button {
+        min-height: 3.5rem;
+
+        font-size: 1.2rem;
+    }
+}
