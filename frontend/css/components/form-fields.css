@@ -1,0 +1,413 @@
+/* ========================================
+   FORM FIELDS
+   Inputs, selects, textareas, checkboxes,
+   segmented controls and switches.
+======================================== */
+
+.tf-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.tf-field {
+    display: grid;
+    gap: 0.625rem;
+
+    min-width: 0;
+}
+
+.tf-field__label {
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    color: var(--tf-ink);
+}
+
+.tf-field__label .tf-required {
+    color: #C62828;
+}
+
+.tf-field__optional {
+    font-weight: 400;
+    color: var(--tf-text-muted);
+}
+
+
+/* ========================================
+   INPUT WITH ICONS
+======================================== */
+
+.tf-input-wrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.tf-input-wrap__icon {
+    position: absolute;
+    left: 1.625rem;
+
+    width: 1.75rem;
+    height: 1.75rem;
+
+    color: #59625E;
+    pointer-events: none;
+}
+
+.tf-input {
+    width: 100%;
+    min-height: var(--tf-input-height);
+    padding: 0 1.375rem;
+
+    border: 1.5px solid var(--tf-border-field);
+    border-radius: var(--tf-radius-field);
+
+    font-family: inherit;
+    font-size: 1.4rem;
+
+    color: var(--tf-text-primary);
+    background-color: var(--tf-input-bg);
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease;
+}
+
+.tf-input-wrap__icon + .tf-input {
+    padding-left: 5.125rem;
+}
+
+.tf-input--has-toggle {
+    padding-right: 4.5rem;
+}
+
+.tf-input::placeholder {
+    color: #7C8581;
+}
+
+.tf-input:hover:not(:disabled):not([readonly]) {
+    border-color: #C9BFB1;
+}
+
+.tf-input:focus {
+    outline: none;
+
+    border-color: var(--tf-sage);
+    background-color: #FFFFFF;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-input[readonly],
+.tf-input:disabled {
+    color: #6B7470;
+    background-color: var(--tf-input-bg-readonly);
+}
+
+.tf-input[aria-invalid="true"] {
+    border-color: var(--tf-danger);
+}
+
+.tf-input[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 0.25rem rgba(180, 35, 24, 0.14);
+}
+
+.tf-textarea {
+    min-height: 7rem;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.tf-input-wrap--top .tf-input-wrap__icon {
+    top: 1.125rem;
+}
+
+.tf-select {
+    appearance: none;
+
+    padding-right: 4rem;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F2D29' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.375rem center;
+    background-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   FLOATING LABEL FIELD (Register design)
+   Label and placeholder stacked inside the box.
+======================================== */
+
+.tf-stacked {
+    position: relative;
+
+    display: block;
+}
+
+.tf-stacked .tf-input {
+    min-height: 4.75rem;
+    padding-top: 1.375rem;
+    padding-left: 6rem;
+
+    font-size: 1.25rem;
+}
+
+.tf-stacked__label {
+    position: absolute;
+    top: 0.6875rem;
+    left: 6rem;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: var(--tf-text-primary);
+    pointer-events: none;
+}
+
+.tf-stacked .tf-input-wrap__icon,
+.tf-stacked .tf-password-toggle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tf-stacked .tf-input-wrap__icon {
+    left: 1.875rem;
+
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+
+/* ========================================
+   PASSWORD VISIBILITY TOGGLE
+======================================== */
+
+.tf-password-toggle {
+    position: absolute;
+    right: 0.875rem;
+
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border: 0;
+    border-radius: var(--tf-radius-sm);
+
+    color: #59625E;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.tf-password-toggle svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.tf-password-toggle:hover {
+    color: var(--tf-ink);
+    background-color: rgba(18, 59, 49, 0.06);
+}
+
+.tf-password-toggle:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-password-toggle .tf-icon-eye-off {
+    display: none;
+}
+
+.tf-password-toggle[aria-pressed="true"] .tf-icon-eye {
+    display: none;
+}
+
+.tf-password-toggle[aria-pressed="true"] .tf-icon-eye-off {
+    display: block;
+}
+
+
+/* ========================================
+   FIELD MESSAGES
+======================================== */
+
+.tf-field__error {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    margin: 0;
+
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-align: left;
+
+    color: var(--tf-danger);
+}
+
+.tf-field__error:empty {
+    display: none;
+}
+
+.tf-field__error::before {
+    content: "";
+
+    flex: none;
+
+    width: 1rem;
+    height: 1rem;
+    margin-top: 2px;
+
+    background-color: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.tf-field__hint {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+
+    margin: 0;
+
+    font-size: 1.2rem;
+    line-height: 1.45;
+    text-align: left;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-field__hint svg {
+    flex: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-field__meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    font-size: 0.95rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-field__counter {
+    margin-left: auto;
+    color: var(--tf-text-muted);
+}
+
+
+/* ========================================
+   CHECKBOX
+======================================== */
+
+.tf-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.35rem;
+
+    color: var(--tf-text-primary);
+
+    cursor: pointer;
+}
+
+.tf-checkbox__input {
+    appearance: none;
+
+    flex: none;
+
+    display: grid;
+    place-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+
+    border: 1.5px solid var(--tf-border-field);
+    border-radius: 0.5rem;
+
+    background-color: var(--tf-input-bg);
+
+    cursor: pointer;
+
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease;
+}
+
+.tf-checkbox__input::after {
+    content: "";
+
+    width: 1.125rem;
+    height: 1.125rem;
+
+    background-color: #FFFFFF;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+
+    transform: scale(0);
+    transition: transform 140ms ease;
+}
+
+.tf-checkbox__input:checked {
+    border-color: #2E6E44;
+    background-color: #2E6E44;
+}
+
+.tf-checkbox__input:checked::after {
+    transform: scale(1);
+}
+
+.tf-checkbox__input:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-checkbox__input[aria-invalid="true"] {
+    border-color: var(--tf-danger);
+}
+
+
+/* ========================================
+   FORM ROW HELPERS
+======================================== */
+
+.tf-form__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.tf-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.375rem 2rem;
+}
+
+.tf-form__grid .tf-field--full {
+    grid-column: 1 / -1;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-input,
+    .tf-checkbox__input,
+    .tf-checkbox__input::after {
+        transition: none;
+    }
+}
