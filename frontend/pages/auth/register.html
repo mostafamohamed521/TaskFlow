@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="tf-auth-root">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="robots" content="noindex" />
+
+        <title>Create Account — TaskFlow</title>
+
+        <link rel="icon" href="../../public/assets/branding/logo-mark.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../../css/foundation/tokens.css" />
+        <link rel="stylesheet" href="../../css/foundation/base.css" />
+        <link rel="stylesheet" href="../../css/layouts/auth-layout.css" />
+        <link rel="stylesheet" href="../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../css/components/form-fields.css" />
+        <link rel="stylesheet" href="../../css/components/form-feedback.css" />
+        <link rel="stylesheet" href="../../css/components/password-fields.css" />
+        <link rel="stylesheet" href="../../css/pages/auth/register.css" />
+        <link rel="stylesheet" href="../../css/responsive/auth-responsive.css" />
+    </head>
+
+    <body>
+        <div class="tf-auth tf-auth--split">
+            <aside class="tf-auth__brand">
+                <a class="tf-brand" href="../../index.html" aria-label="TaskFlow home">
+                    <img
+                        class="tf-brand__mark"
+                        src="../../public/assets/branding/logo-mark.png"
+                        width="92"
+                        height="112"
+                        alt=""
+                    />
+
+                    <span class="tf-brand__text" aria-hidden="true">
+                        <span class="tf-brand__name">Task<span>Flow</span></span>
+                        <span class="tf-brand__tagline">Plan &middot; Organize &middot; Achieve</span>
+                    </span>
+                </a>
+
+                <div class="tf-auth__brand-copy">
+                    <h2 class="tf-auth__brand-title">
+                        Start Your Journey<br />
+                        With <em>TaskFlow</em>
+                    </h2>
+
+                    <p class="tf-auth__brand-text">
+                        Bring your ideas, projects, and team into one beautifully organized workspace.
+                    </p>
+                </div>
+
+                <img
+                    class="tf-auth__illustration"
+                    src="../../public/assets/illustrations/auth/register.png"
+                    width="1196"
+                    height="1040"
+                    alt=""
+                />
+            </aside>
+
+            <main class="tf-auth__panel" id="main-content">
+                <div class="tf-auth__content tf-register">
+                    <nav class="tf-auth-tabs" aria-label="Account">
+                        <a class="tf-auth-tabs__link" href="register.html" aria-current="page">Sign Up</a>
+                        <a class="tf-auth-tabs__link" href="login.html">Sign In</a>
+                    </nav>
+
+                    <header class="tf-auth__header">
+                        <h1 class="tf-auth__title">Create Your Account!</h1>
+
+                        <p class="tf-auth__subtitle">
+                            Join TaskFlow and start organizing your work today.
+                        </p>
+                    </header>
+
+                    <form id="register-form" class="tf-form tf-register__form" novalidate>
+                        <div
+                            id="register-alert"
+                            class="tf-alert tf-alert--error"
+                            role="alert"
+                            hidden
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M10.3 3.9 2.4 17.7A2 2 0 0 0 4.1 20.7h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
+                                <path d="M12 9.5v4.5" />
+                                <path d="M12 17.2v.1" />
+                            </svg>
+
+                            <div>
+                                <strong class="tf-alert__title" data-alert-title>We couldn't create your account</strong>
+                                <span data-alert-message></span>
+                            </div>
+                        </div>
+
+                        <div class="tf-field">
+                            <div class="tf-input-wrap tf-stacked">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="8" r="4" />
+                                    <path d="M4.5 20.5c.8-3.6 3.7-5.5 7.5-5.5s6.7 1.9 7.5 5.5" />
+                                </svg>
+
+                                <input
+                                    id="register-name"
+                                    class="tf-input"
+                                    type="text"
+                                    name="fullName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                    aria-describedby="register-name-error"
+                                />
+
+                                <label class="tf-stacked__label" for="register-name">
+                                    Full Name <span aria-hidden="true">*</span>
+                                </label>
+                            </div>
+
+                            <p class="tf-field__error" id="register-name-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-field">
+                            <div class="tf-input-wrap tf-stacked">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                                    <path d="m3 7 9 6 9-6" />
+                                </svg>
+
+                                <input
+                                    id="register-email"
+                                    class="tf-input"
+                                    type="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                    aria-describedby="register-email-error"
+                                />
+
+                                <label class="tf-stacked__label" for="register-email">
+                                    Email Address <span aria-hidden="true">*</span>
+                                </label>
+                            </div>
+
+                            <p class="tf-field__error" id="register-email-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-field">
+                            <div class="tf-input-wrap tf-stacked">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+                                    <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+                                </svg>
+
+                                <input
+                                    id="register-password"
+                                    class="tf-input tf-input--has-toggle"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Create a strong password"
+                                    autocomplete="new-password"
+                                    required
+                                    aria-describedby="register-password-error"
+                                />
+
+                                <label class="tf-stacked__label" for="register-password">
+                                    Password <span aria-hidden="true">*</span>
+                                </label>
+
+                                <button
+                                    class="tf-password-toggle"
+                                    type="button"
+                                    data-password-toggle="register-password"
+                                    aria-controls="register-password"
+                                    aria-pressed="false"
+                                    aria-label="Show password"
+                                >
+                                    <svg class="tf-icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    <svg class="tf-icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M9.9 5.2A10.4 10.4 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-2.9 3.9M6.6 6.6A17.4 17.4 0 0 0 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6" />
+                                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+                                        <path d="m3 3 18 18" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <p class="tf-field__error" id="register-password-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-field">
+                            <div class="tf-input-wrap tf-stacked">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+                                    <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+                                </svg>
+
+                                <input
+                                    id="register-confirm"
+                                    class="tf-input tf-input--has-toggle"
+                                    type="password"
+                                    name="confirmPassword"
+                                    placeholder="Confirm your password"
+                                    autocomplete="new-password"
+                                    required
+                                    aria-describedby="register-confirm-error"
+                                    data-matches="password"
+                                />
+
+                                <label class="tf-stacked__label" for="register-confirm">
+                                    Confirm Password <span aria-hidden="true">*</span>
+                                </label>
+
+                                <button
+                                    class="tf-password-toggle"
+                                    type="button"
+                                    data-password-toggle="register-confirm"
+                                    aria-controls="register-confirm"
+                                    aria-pressed="false"
+                                    aria-label="Show password"
+                                >
+                                    <svg class="tf-icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    <svg class="tf-icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M9.9 5.2A10.4 10.4 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-2.9 3.9M6.6 6.6A17.4 17.4 0 0 0 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6" />
+                                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+                                        <path d="m3 3 18 18" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <p class="tf-field__error" id="register-confirm-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-field">
+                            <label class="tf-checkbox tf-register__terms" for="register-terms">
+                                <input
+                                    id="register-terms"
+                                    class="tf-checkbox__input"
+                                    type="checkbox"
+                                    name="terms"
+                                    required
+                                    aria-describedby="register-terms-error"
+                                />
+
+                                <span>
+                                    I agree to the
+                                    <a class="tf-link tf-link--underline" href="../public/terms.html" target="_blank" rel="noopener">Terms of Service</a>
+                                    and
+                                    <a class="tf-link tf-link--underline" href="../public/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                                </span>
+                            </label>
+
+                            <p class="tf-field__error" id="register-terms-error" aria-live="polite"></p>
+                        </div>
+
+                        <button
+                            class="tf-button tf-button--primary tf-button--block"
+                            type="submit"
+                        >
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M4.5 20.5c.8-3.6 3.7-5.5 7.5-5.5s6.7 1.9 7.5 5.5" />
+                            </svg>
+
+                            <span class="tf-button__label">Create Account</span>
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 12h15" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="tf-or" role="separator">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="tf-socials">
+                        <button
+                            class="tf-social"
+                            type="button"
+                            data-provider="Google"
+                            aria-describedby="social-note"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#4285F4" d="M22.5 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.2-4.8 3.2-8Z" />
+                                <path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1V17A11 11 0 0 0 12 23Z" />
+                                <path fill="#FBBC05" d="M5.8 14.2a6.6 6.6 0 0 1 0-4.4V7H2.1a11 11 0 0 0 0 10Z" />
+                                <path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z" />
+                            </svg>
+                            <span>Google</span>
+                        </button>
+
+                        <button
+                            class="tf-social"
+                            type="button"
+                            data-provider="GitHub"
+                            aria-describedby="social-note"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#1F2937" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5Z" />
+                            </svg>
+                            <span>GitHub</span>
+                        </button>
+
+                        <button
+                            class="tf-social"
+                            type="button"
+                            data-provider="Microsoft"
+                            aria-describedby="social-note"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#F25022" d="M2 2h9.5v9.5H2Z" />
+                                <path fill="#7FBA00" d="M12.5 2H22v9.5h-9.5Z" />
+                                <path fill="#00A4EF" d="M2 12.5h9.5V22H2Z" />
+                                <path fill="#FFB900" d="M12.5 12.5H22V22h-9.5Z" />
+                            </svg>
+                            <span>Microsoft</span>
+                        </button>
+                    </div>
+
+                    <p class="tf-visually-hidden" id="social-note">
+                        Social sign-in is not available in this demo yet.
+                    </p>
+
+                    <p class="tf-auth__switch tf-register__switch">
+                        Already have an account?
+                        <a class="tf-link tf-link--underline" href="login.html">Sign In</a>
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="../../js/pages/auth/register.js"></script>
+    </body>
+</html>
