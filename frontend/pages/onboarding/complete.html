@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="tf-auth-root">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="robots" content="noindex" />
+
+        <title>Your Workspace Is Ready — TaskFlow</title>
+
+        <link rel="icon" href="../../public/assets/branding/logo-mark.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../../css/foundation/tokens.css" />
+        <link rel="stylesheet" href="../../css/foundation/base.css" />
+        <link rel="stylesheet" href="../../css/layouts/auth-layout.css" />
+        <link rel="stylesheet" href="../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../css/components/form-fields.css" />
+        <link rel="stylesheet" href="../../css/components/form-feedback.css" />
+        <link rel="stylesheet" href="../../css/layouts/onboarding-layout.css" />
+        <link rel="stylesheet" href="../../css/components/progress-stepper.css" />
+        <link rel="stylesheet" href="../../css/pages/onboarding/complete.css" />
+        <link rel="stylesheet" href="../../css/responsive/auth-responsive.css" />
+        <link rel="stylesheet" href="../../css/responsive/onboarding-responsive.css" />
+    </head>
+
+    <body>
+        <div class="tf-auth tf-auth--onboarding">
+            <aside class="tf-auth__brand">
+                <a class="tf-brand" href="../../index.html" aria-label="TaskFlow home">
+                    <img
+                        class="tf-brand__mark"
+                        src="../../public/assets/branding/logo-mark.png"
+                        width="92"
+                        height="112"
+                        alt=""
+                    />
+
+                    <span class="tf-brand__text" aria-hidden="true">
+                        <span class="tf-brand__name">Task<span>Flow</span></span>
+                        <span class="tf-brand__tagline">Plan &middot; Organize &middot; Achieve</span>
+                    </span>
+                </a>
+
+                <div class="tf-auth__brand-copy">
+                    <h2 class="tf-auth__brand-title">
+                        All Set!
+                    </h2>
+
+                <span class="tf-onboarding__accent" aria-hidden="true"></span>
+
+                    <p class="tf-auth__brand-text">
+                        Your workspace is ready<br />
+                        to go. Start planning,<br />
+                        organizing, and achieving<br />
+                        your goals with TaskFlow.
+                    </p>
+                </div>
+
+                <img
+                    class="tf-auth__illustration"
+                    src="../../public/assets/illustrations/onboarding/complete.png"
+                    width="1196"
+                    height="1040"
+                    alt=""
+                />
+            </aside>
+
+            <main class="tf-auth__panel" id="main-content">
+                <div class="tf-auth__content tf-auth__content--wide tf-onboarding tf-onboarding--complete">
+                    <nav class="tf-stepper-wrap" aria-label="Setup progress">
+                        <ol class="tf-stepper">
+                            <li class="tf-stepper__step tf-stepper__step--complete" data-step="workspace-type">
+                                <span class="tf-stepper__marker" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="m5 12.5 4.5 4.5L19 7.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="tf-stepper__label">1. Workspace Type <span class="tf-visually-hidden">(completed)</span></span>
+                            </li>
+
+                            <li class="tf-stepper__step tf-stepper__step--complete" data-step="create-workspace">
+                                <span class="tf-stepper__marker" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="m5 12.5 4.5 4.5L19 7.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="tf-stepper__label">2. Create Workspace <span class="tf-visually-hidden">(completed)</span></span>
+                            </li>
+
+                            <li class="tf-stepper__step tf-stepper__step--complete" data-step="invite-team">
+                                <span class="tf-stepper__marker" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="m5 12.5 4.5 4.5L19 7.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="tf-stepper__label">3. Invite Team <span class="tf-visually-hidden">(completed)</span></span>
+                            </li>
+
+                            <li class="tf-stepper__step tf-stepper__step--current" data-step="get-started" aria-current="step">
+                                <span class="tf-stepper__marker" aria-hidden="true">
+                                    4
+                                </span>
+
+                                <span class="tf-stepper__label">4. Get Started </span>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <div class="tf-auth__content--center">
+                        <img
+                            class="tf-onboarding__success"
+                            src="../../public/assets/illustrations/onboarding/complete-check.png"
+                            width="680"
+                            height="406"
+                            alt=""
+                        />
+
+                        <h1 class="tf-auth__title">Your Workspace Is Ready!</h1>
+
+                        <p class="tf-auth__subtitle">
+                            You&rsquo;ve successfully created your workspace and set up the basics.<br />
+                            Now you can start organizing your work.
+                        </p>
+                    </div>
+
+                    <dl class="tf-workspace-summary" aria-label="Workspace summary">
+                        <div class="tf-workspace-summary__item">
+                            <dt>Workspace</dt>
+                            <dd id="summary-name">My Workspace</dd>
+                        </div>
+
+                        <div class="tf-workspace-summary__item">
+                            <dt>Type</dt>
+                            <dd id="summary-type">Personal</dd>
+                        </div>
+
+                        <div class="tf-workspace-summary__item">
+                            <dt>Your Role</dt>
+                            <dd id="summary-role">Owner</dd>
+                        </div>
+
+                        <div class="tf-workspace-summary__item">
+                            <dt>Pending Invitations</dt>
+                            <dd id="summary-invitations">0</dd>
+                        </div>
+                    </dl>
+
+                    <ul class="tf-feature-grid">
+                        <li class="tf-feature-card">
+                            <span class="tf-feature-card__icon tf-feature-card__icon--green" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+                                    <path d="M3.5 10h17" />
+                                    <path d="M8 3v4M16 3v4" />
+                                </svg>
+                            </span>
+
+                            <h2 class="tf-feature-card__title">Create Projects</h2>
+                            <p class="tf-feature-card__text">Plan and manage<br />your work</p>
+                        </li>
+
+                        <li class="tf-feature-card">
+                            <span class="tf-feature-card__icon tf-feature-card__icon--green" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="m3.5 6.5 1.8 1.8 3.2-3.3" />
+                                    <path d="m3.5 14.5 1.8 1.8 3.2-3.3" />
+                                    <path d="M12 7h8.5M12 15h8.5" />
+                                </svg>
+                            </span>
+
+                            <h2 class="tf-feature-card__title">Add Tasks</h2>
+                            <p class="tf-feature-card__text">Turn goals into<br />actionable tasks</p>
+                        </li>
+
+                        <li class="tf-feature-card">
+                            <span class="tf-feature-card__icon tf-feature-card__icon--peach" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3.5" />
+                                    <path d="M2.5 20c.6-3.4 3-5.3 6.5-5.3s5.9 1.9 6.5 5.3" />
+                                    <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8" />
+                                    <path d="M18 14.9c2 .6 3.2 2.2 3.5 5.1" />
+                                </svg>
+                            </span>
+
+                            <h2 class="tf-feature-card__title">Collaborate</h2>
+                            <p class="tf-feature-card__text">Work with your<br />team easily</p>
+                        </li>
+
+                        <li class="tf-feature-card">
+                            <span class="tf-feature-card__icon tf-feature-card__icon--green" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M5 20v-6M10 20V9M15 20v-8M20 20V4" />
+                                </svg>
+                            </span>
+
+                            <h2 class="tf-feature-card__title">Track Progress</h2>
+                            <p class="tf-feature-card__text">Stay on top of<br />your goals</p>
+                        </li>
+                    </ul>
+
+                    <div class="tf-onboarding__finish">
+                        <button
+                            class="tf-button tf-button--primary "
+                            type="button"
+                            id="finish-onboarding"
+                        >
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14.5 4.5c2.5-1.3 4.8-1.5 6-1 .5 1.2.3 3.5-1 6L14 15l-5-5Z" />
+                                <path d="m9 10-3.5.5L3 13l4 1" />
+                                <path d="m14 15-.5 3.5L11 21l-1-4" />
+                                <path d="M6 17c-1.5.5-2.5 2-2.5 3.5C5 20.5 6.5 19.5 7 18" />
+                                <circle cx="15.5" cy="8.5" r="1.5" />
+                            </svg>
+
+                            <span class="tf-button__label">Go to My Workspace</span>
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 12h15" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="../../js/pages/onboarding/complete.js"></script>
+    </body>
+</html>
