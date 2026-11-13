@@ -1,0 +1,90 @@
+/* ========================================
+   SECURITY
+======================================== */
+
+.tf-pending-email {
+    font-weight: 600;
+
+    color: var(--tf-warning);
+}
+
+/* Login sessions span the full row under the header */
+.tf-setting-row--sessions {
+    row-gap: 1rem;
+}
+
+.tf-session-list {
+    grid-column: 2 / -1;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 1rem;
+
+    list-style: none;
+
+    background-color: var(--tf-app-card);
+}
+
+.tf-session {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto 2.75rem;
+    gap: 1.25rem;
+    align-items: center;
+
+    padding: 0.875rem 1.25rem;
+}
+
+.tf-session + .tf-session {
+    border-top: 1px solid var(--tf-app-row-border);
+}
+
+.tf-session__device {
+    width: 2rem;
+    height: 2rem;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-session__title {
+    margin: 0;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-session__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.625rem;
+
+    margin: 0.25rem 0 0;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-session__time {
+    font-size: 1.05rem;
+    white-space: nowrap;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-session__menu {
+    position: relative;
+}
+
+.tf-session .tf-icon-trigger {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.tf-settings-card > .tf-danger-zone {
+    margin-top: 1rem;
+}
