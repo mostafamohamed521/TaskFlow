@@ -1,0 +1,37 @@
+.hero{background:radial-gradient(900px 500px at 80% 40%,var(--halo) 0,transparent 70%),var(--bg-hero);padding-top:84px;overflow:hidden;transition:background .25s}
+.hero-grid{display:grid;grid-template-columns:45fr 55fr;align-items:center;min-height:clamp(420px,36vw,540px);padding-left:max(var(--tf-gutter),calc((100vw - 1320px)/2))}
+.copy{padding:40px 24px 40px 0;max-width:640px}
+.eyebrow{margin:0 0 16px;font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--link-hover)}
+h1{font-size:clamp(32px,3.7vw,52px);line-height:1.08;font-weight:700;letter-spacing:-.025em;color:var(--heading)}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{margin:20px 0 0;max-width:460px;font-size:clamp(14.5px,1.05vw,16px);line-height:1.7;color:var(--text)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.note{display:flex;align-items:center;gap:14px;margin:24px 0 0;font-size:13px;color:var(--text-soft)}
+.note::before{content:"";width:18px;height:1px;background:currentColor;opacity:.6}
+.visual{margin:0;align-self:stretch;display:flex;align-items:center}
+.visual img{display:block;width:100%;height:auto;object-fit:contain;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 16%,#000 80%,transparent 100%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 16%,#000 80%,transparent 100%);mask-composite:intersect}
+/* The scene is a light render: in dark mode it becomes a framed stage instead of fading into the background */
+[data-theme="dark"] .visual img{-webkit-mask-image:none;mask-image:none;border-radius:32px 0 0 32px;box-shadow:0 24px 70px rgba(0,0,0,.45)}
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;padding-left:0}
+  .copy{padding:32px var(--tf-gutter) 0;max-width:680px}
+  .visual img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 85%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 85%,transparent 100%)}
+  [data-theme="dark"] .visual img{border-radius:24px;margin:0 var(--tf-gutter);width:calc(100% - 2*var(--tf-gutter))}
+}
+@media (max-width:640px){.cta .btn{flex:1 1 100%}.eyebrow{letter-spacing:.22em;font-size:12px}}
+
+/* Small screens: image on top, text + buttons under it, whole hero fits the screen height */
+@media (max-width:1100px){
+  .hero{padding-top:84px}
+  .hero-grid{min-height:calc(100vh - 84px);min-height:calc(100svh - 84px);grid-template-rows:minmax(0,1fr) auto;align-items:stretch}
+  .visual{order:-1;min-height:0;justify-content:center;align-items:center;padding-top:8px}
+  .visual img{max-height:100%;object-fit:contain}
+  .copy{padding:4px var(--tf-gutter) 28px;margin-inline:auto;max-width:640px;text-align:center}
+  .lead{margin-inline:auto}.cta{justify-content:center}.note{justify-content:center}.note::before{display:none}
+}
+@media (max-width:640px){
+  h1{font-size:clamp(28px,8.2vw,38px)}
+  .cta{flex-direction:column;gap:10px}.cta .btn{width:100%;flex:none}
+}
