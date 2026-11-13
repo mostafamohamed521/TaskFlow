@@ -1,0 +1,74 @@
+/* ========================================
+   PASSWORD RECOVERY
+   Forgot Password + Reset Password.
+======================================== */
+
+.tf-recovery .tf-auth__header {
+    margin-bottom: 2.25rem;
+}
+
+.tf-recovery .tf-status-icon {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1.75rem;
+}
+
+.tf-recovery .tf-status-icon svg {
+    width: 4.75rem;
+    height: 4.75rem;
+}
+
+.tf-recovery .tf-form {
+    gap: 1.875rem;
+}
+
+.tf-recovery .tf-input {
+    min-height: 5rem;
+}
+
+.tf-recovery .tf-button--primary {
+    min-height: 4.5rem;
+}
+
+.tf-recovery__back {
+    margin-top: 2.125rem;
+    text-align: center;
+}
+
+.tf-recovery__actions {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+
+/* Reset page is denser: icon above, strength meter, hint */
+
+.tf-recovery--reset .tf-status-icon {
+    width: 8.75rem;
+    height: 8.75rem;
+    margin-bottom: 0.875rem;
+}
+
+.tf-recovery--reset .tf-auth__header {
+    margin-bottom: 1.75rem;
+}
+
+.tf-recovery--reset .tf-form {
+    gap: 1.5rem;
+}
+
+.tf-recovery--reset .tf-auth__divider {
+    margin: 2.75rem 0 0;
+}
+
+.tf-recovery__password-group {
+    display: grid;
+    gap: 0.875rem;
+}
+
+.tf-recovery__password-group .tf-field__hint {
+    margin-top: 2px;
+}
