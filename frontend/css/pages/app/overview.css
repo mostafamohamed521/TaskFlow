@@ -1,0 +1,32 @@
+/* ========================================
+   OVERVIEW (temporary workspace home)
+   An honest empty state until the Projects / Tasks
+   modules exist. No invented numbers.
+======================================== */
+
+.tf-overview {
+    gap: 1.25rem;
+}
+
+.tf-overview__empty {
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+
+    padding: 2rem 1.5rem;
+
+    text-align: center;
+}
+
+.tf-overview__art {
+    width: 16rem;
+    height: auto;
+}
+
+.tf-overview__empty .tf-section-head__text {
+    max-width: 40rem;
+}
+
+.tf-overview .tf-action-list {
+    margin-bottom: 0;
+}
