@@ -1,0 +1,33 @@
+/* ========================================
+   MY PROFILE
+======================================== */
+
+.tf-profile-form {
+    gap: 1rem 2rem;
+}
+
+.tf-profile-form > .tf-field__error:empty {
+    display: none;
+}
+
+.tf-field__label--icon {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tf-field__label--icon svg {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.tf-field__hint--small {
+    font-size: 0.95rem;
+}
+
+.tf-profile-card__remove {
+    margin-top: 0.75rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
