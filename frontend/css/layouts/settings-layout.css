@@ -1,0 +1,493 @@
+/* ========================================
+   SETTINGS LAYOUT
+   Page header, profile card + content grid,
+   content card, section header, setting rows
+   and the form action bar.
+======================================== */
+
+.tf-settings {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 82rem;
+}
+
+.tf-settings__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin: 0.5rem 0 1.25rem;
+}
+
+.tf-settings__header-icon {
+    display: grid;
+    place-items: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 1.25rem;
+
+    color: var(--tf-olive);
+    background-color: var(--tf-tint-green);
+}
+
+.tf-settings__header-icon svg {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.tf-settings__title {
+    margin: 0;
+
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    color: var(--tf-ink);
+}
+
+.tf-settings__subtitle {
+    margin: 0.375rem 0 0;
+
+    font-size: 1.3rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-settings__grid {
+    display: grid;
+    grid-template-columns: 17.75rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.tf-settings__main {
+    display: grid;
+    gap: 1.125rem;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   CONTENT CARD
+======================================== */
+
+.tf-settings-card {
+    padding: 1.25rem 1.5rem 1.125rem;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 1.375rem;
+
+    background-color: var(--tf-app-card);
+    box-shadow: var(--tf-app-shadow);
+}
+
+.tf-section-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+
+    margin-bottom: 0.75rem;
+}
+
+.tf-section-head > svg {
+    flex: none;
+
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-top: 0.125rem;
+
+    color: var(--tf-olive);
+}
+
+.tf-section-head__title {
+    margin: 0;
+
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+
+    color: var(--tf-ink);
+}
+
+.tf-section-head__text {
+    margin: 0.25rem 0 0;
+
+    font-size: 1.15rem;
+
+    color: var(--tf-text-secondary);
+}
+
+
+/* ========================================
+   SETTING ROWS
+   Icon circle | title + description | control
+======================================== */
+
+.tf-setting-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tf-setting-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+
+    padding: 0.75rem 0;
+}
+
+.tf-setting-row + .tf-setting-row {
+    border-top: 1px solid var(--tf-app-row-border);
+}
+
+.tf-setting-row__icon {
+    display: grid;
+    place-items: center;
+
+    width: 3.75rem;
+    height: 3.75rem;
+
+    border-radius: 50%;
+
+    color: var(--tf-olive);
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-setting-row__icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.tf-setting-row__title {
+    margin: 0;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-setting-row__text {
+    margin: 0.25rem 0 0;
+
+    font-size: 1.05rem;
+    line-height: 1.45;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-setting-row__control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.tf-setting-row--compact {
+    padding: 0.5rem 0;
+}
+
+.tf-setting-row--compact .tf-setting-row__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+.tf-setting-row--compact .tf-setting-row__icon svg {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.tf-setting-row--compact .tf-setting-row__title {
+    font-size: 1.2rem;
+}
+
+.tf-setting-row--compact .tf-setting-row__text {
+    margin-top: 0.125rem;
+    font-size: 1rem;
+}
+
+/* Outline action button used in rows */
+.tf-button--outline-small {
+    min-height: 2.875rem;
+    padding: 0 1.75rem;
+
+    border-width: 1.5px;
+    border-radius: 0.625rem;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   STATUS BADGES
+======================================== */
+
+.tf-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    padding: 0.25rem 0.75rem;
+
+    border-radius: 0.5rem;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    color: var(--tf-olive);
+    background-color: var(--tf-tint-green);
+}
+
+.tf-status svg {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.tf-status--neutral {
+    color: var(--tf-text-secondary);
+    background-color: var(--tf-info-bg);
+}
+
+
+/* ========================================
+   DANGER ZONE
+======================================== */
+
+.tf-danger-zone {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+
+    padding: 1rem 1.25rem;
+
+    border: 1px solid transparent;
+    border-radius: 1rem;
+
+    background-color: var(--tf-danger-soft);
+}
+
+.tf-danger-zone__icon {
+    display: grid;
+    place-items: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+
+    color: var(--tf-danger);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tf-danger-zone__icon svg {
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.tf-danger-zone__title {
+    margin: 0;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: var(--tf-danger);
+}
+
+.tf-danger-zone__text {
+    margin: 0.25rem 0 0;
+
+    font-size: 1.1rem;
+    line-height: 1.5;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-button--danger-outline {
+    min-height: 2.875rem;
+    padding: 0 1.5rem;
+
+    border-width: 1.5px;
+    border-radius: 0.625rem;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.tf-button--danger {
+    color: #FFFFFF;
+    background-color: #B42318;
+}
+
+.tf-button--danger:hover:not(:disabled) {
+    background-color: #921B12;
+}
+
+
+/* ========================================
+   FORM ACTION BAR
+======================================== */
+
+.tf-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid var(--tf-app-row-border);
+}
+
+.tf-form-actions--plain {
+    border-top: 0;
+}
+
+.tf-form-actions__status {
+    margin: 0 auto 0 0;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-form-actions .tf-button {
+    min-height: 3.375rem;
+
+    font-size: 1.3rem;
+}
+
+.tf-form-actions .tf-button--secondary {
+    min-width: 10rem;
+}
+
+.tf-form-actions .tf-button--primary {
+    min-width: 15rem;
+}
+
+
+/* ========================================
+   SETTINGS FIELD SIZING
+======================================== */
+
+.tf-settings .tf-input {
+    min-height: 3.125rem;
+
+    font-size: 1.15rem;
+}
+
+.tf-settings .tf-input-wrap__icon {
+    left: 1.125rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-settings .tf-input-wrap__icon + .tf-input {
+    padding-left: 3.75rem;
+}
+
+.tf-settings .tf-field__label {
+    font-size: 1.15rem;
+}
+
+.tf-settings .tf-field {
+    gap: 0.5rem;
+}
+
+.tf-settings .tf-select {
+    padding-right: 3rem;
+    background-position: right 1rem center;
+}
+
+
+/* ========================================
+   ACTION ROWS (link / button rows with a chevron)
+======================================== */
+
+.tf-action-list {
+    display: grid;
+    gap: 0.75rem;
+
+    margin: 0 0 1rem;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tf-action-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 0.875rem;
+
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+
+    color: inherit;
+    background-color: var(--tf-app-card);
+
+    cursor: pointer;
+
+    transition:
+        border-color 160ms ease,
+        background-color 160ms ease;
+}
+
+.tf-action-row:hover {
+    border-color: var(--tf-sage);
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-action-row:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-action-row .tf-setting-row__icon {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.tf-action-row__text {
+    display: grid;
+    gap: 0.125rem;
+}
+
+.tf-action-row__text .tf-setting-row__text {
+    margin: 0;
+}
+
+.tf-action-row__chevron {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    color: var(--tf-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-action-row {
+        transition: none;
+    }
+}
