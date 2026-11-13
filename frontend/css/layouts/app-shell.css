@@ -1,0 +1,622 @@
+/* ========================================
+   APP SHELL
+   Dark sidebar + warm main area with a curved edge,
+   topbar with search, notifications and profile menu.
+   Sizes are in rem; the root font size scales with the
+   viewport (see "APP ROOT SCALE").
+======================================== */
+
+/* ========================================
+   APP ROOT SCALE
+======================================== */
+
+@media (min-width: 1025px) {
+    .tf-app-root {
+        font-size: clamp(11px, min(1.04vw, 1.56vh), 17px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .tf-app-root {
+        font-size: 14px;
+    }
+}
+
+.tf-app-root body {
+    color: var(--tf-text-primary);
+    background-color: var(--tf-brand-bg);
+}
+
+
+/* ========================================
+   LAYOUT GRID
+======================================== */
+
+.tf-app {
+    display: grid;
+    grid-template-columns: 18.25rem minmax(0, 1fr);
+
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.tf-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    height: 100dvh;
+    margin-right: -3rem;
+    padding: 1.5rem 3.5rem 1.25rem 1.5rem;
+
+    overflow-y: auto;
+
+    color: var(--tf-text-on-brand);
+    background:
+        radial-gradient(90% 40% at 0% 100%, rgba(76, 124, 92, 0.55), rgba(76, 124, 92, 0) 70%),
+        linear-gradient(165deg, #154535 0%, var(--tf-brand-bg) 45%, var(--tf-brand-bg-deep) 100%);
+}
+
+.tf-sidebar__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    margin: 0 0 3.25rem 1rem;
+
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tf-sidebar__brand img {
+    width: auto;
+    height: 3.75rem;
+}
+
+.tf-sidebar__brand-name {
+    display: block;
+
+    font-size: 2.15rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.tf-sidebar__brand-name span {
+    color: var(--tf-mint);
+}
+
+.tf-sidebar__tagline {
+    display: block;
+
+    margin-top: 0.375rem;
+
+    font-size: 0.85rem;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    color: rgba(245, 239, 230, 0.9);
+}
+
+.tf-sidebar__nav {
+    display: grid;
+    gap: 0.25rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tf-sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+
+    min-height: 3.25rem;
+    padding: 0 1.25rem;
+
+    border-radius: 0.875rem;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    color: rgba(245, 239, 230, 0.94);
+}
+
+.tf-sidebar__link svg {
+    flex: none;
+
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+a.tf-sidebar__link:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+a.tf-sidebar__link:focus-visible {
+    outline: 2px solid var(--tf-mint);
+    outline-offset: 2px;
+}
+
+.tf-sidebar__link[aria-current="page"] {
+    font-weight: 600;
+
+    color: #FFFFFF;
+    background: var(--tf-app-sidebar-active);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.18);
+}
+
+/* Modules that are not built yet: shown dimmed, not links. */
+.tf-sidebar__link--soon {
+    color: rgba(245, 239, 230, 0.6);
+    cursor: default;
+}
+
+
+/* Workspace card (bottom of sidebar) */
+
+.tf-workspace-switch {
+    position: relative;
+
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+.tf-workspace-switch__button {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+
+    width: 100%;
+    padding: 0.875rem 1rem;
+
+    border: 1px solid rgba(245, 239, 230, 0.22);
+    border-radius: 1rem;
+
+    font: inherit;
+    text-align: left;
+
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+}
+
+.tf-workspace-switch__button:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.tf-workspace-switch__button:focus-visible {
+    outline: 2px solid var(--tf-mint);
+    outline-offset: 2px;
+}
+
+.tf-workspace-switch__icon {
+    flex: none;
+
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 0.75rem;
+
+    background-color: rgba(76, 175, 123, 0.25);
+}
+
+.tf-workspace-switch__icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.tf-workspace-switch__text {
+    display: grid;
+    gap: 0.375rem;
+
+    min-width: 0;
+}
+
+.tf-workspace-switch__name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.tf-workspace-switch__type {
+    justify-self: start;
+
+    padding: 0.125rem 0.625rem;
+
+    border-radius: 0.375rem;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: #0F3B24;
+    background-color: #A8D49F;
+}
+
+.tf-workspace-switch__chevron {
+    flex: none;
+
+    width: 1.375rem;
+    height: 1.375rem;
+    margin-left: auto;
+}
+
+
+/* ========================================
+   MAIN AREA (curved edge over the sidebar)
+======================================== */
+
+.tf-app__main {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 1.125rem 1.5rem 2rem 2.5rem;
+
+    background:
+        radial-gradient(40% 30% at 100% 0%, var(--tf-panel-blob), transparent 70%),
+        radial-gradient(40% 30% at 100% 100%, var(--tf-panel-blob), transparent 70%),
+        var(--tf-app-bg);
+
+    border-radius: 4rem 0 0 4rem / 12rem 0 0 12rem;
+}
+
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.tf-topbar {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    min-height: 3.25rem;
+}
+
+.tf-icon-trigger.tf-topbar__menu-button {
+    display: none;
+}
+
+.tf-breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    font-size: 1.1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.tf-breadcrumbs li + li::before {
+    content: "";
+
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+
+    transform: rotate(45deg);
+}
+
+.tf-breadcrumbs a {
+    display: inline-flex;
+    align-items: center;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.tf-breadcrumbs a:hover {
+    color: var(--tf-olive);
+}
+
+.tf-breadcrumbs svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.tf-breadcrumbs [aria-current="page"] {
+    font-weight: 600;
+    color: var(--tf-ink);
+}
+
+.tf-search {
+    position: relative;
+
+    width: min(21rem, 34vw);
+    margin-left: auto;
+}
+
+.tf-search__icon {
+    position: absolute;
+    top: 50%;
+    left: 1.25rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    color: var(--tf-text-primary);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.tf-search__input {
+    width: 100%;
+    height: 3rem;
+    padding: 0 1.25rem 0 3.5rem;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 999px;
+
+    font: inherit;
+    font-size: 1.05rem;
+
+    color: var(--tf-text-primary);
+    background-color: var(--tf-app-card);
+}
+
+.tf-search__input::placeholder {
+    color: var(--tf-text-secondary);
+}
+
+.tf-search__input:focus {
+    outline: none;
+    border-color: var(--tf-sage);
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-topbar__actions {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tf-icon-trigger {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border: 0;
+    border-radius: 50%;
+
+    color: var(--tf-text-primary);
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.tf-icon-trigger svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.tf-icon-trigger:hover {
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-icon-trigger:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-icon-trigger__dot {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.625rem;
+
+    width: 0.625rem;
+    height: 0.625rem;
+
+    border: 2px solid var(--tf-app-bg);
+    border-radius: 50%;
+
+    background-color: #E5484D;
+}
+
+.tf-topbar__divider {
+    width: 1px;
+    height: 2rem;
+
+    background-color: var(--tf-app-card-border);
+}
+
+.tf-avatar-button {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    padding: 0;
+
+    border: 0;
+
+    font: inherit;
+
+    color: var(--tf-text-primary);
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.tf-avatar-button:focus-visible {
+    outline: none;
+}
+
+.tf-avatar-button:focus-visible .tf-avatar {
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-avatar-button > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-avatar {
+    display: grid;
+    place-items: center;
+
+    width: 3.375rem;
+    height: 3.375rem;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #1F6A3A 0%, #0F4A26 100%);
+}
+
+.tf-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   DROPDOWN MENUS (notifications, profile, workspace)
+======================================== */
+
+.tf-menu {
+    position: absolute;
+    top: calc(100% + 0.625rem);
+    right: 0;
+    z-index: 20;
+
+    min-width: 16rem;
+    padding: 0.5rem;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 0.875rem;
+
+    background-color: var(--tf-app-card-solid);
+    box-shadow: 0 1rem 2.5rem rgba(13, 44, 38, 0.18);
+}
+
+.tf-menu[hidden] {
+    display: none;
+}
+
+.tf-menu--up {
+    top: auto;
+    bottom: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+}
+
+.tf-menu__header {
+    padding: 0.625rem 0.75rem;
+
+    border-bottom: 1px solid var(--tf-app-row-border);
+}
+
+.tf-menu__title {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-menu__subtitle {
+    margin: 0.125rem 0 0;
+
+    font-size: 0.9rem;
+
+    color: var(--tf-text-secondary);
+    word-break: break-all;
+}
+
+.tf-menu__empty {
+    margin: 0;
+    padding: 1rem 0.75rem;
+
+    font-size: 0.95rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-menu__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    font: inherit;
+    font-size: 1rem;
+    text-align: left;
+    text-decoration: none;
+
+    color: var(--tf-text-primary);
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.tf-menu__item svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.tf-menu__item:hover,
+.tf-menu__item:focus-visible {
+    outline: none;
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-menu__item--current {
+    font-weight: 600;
+}
+
+.tf-menu__item--danger {
+    color: var(--tf-danger);
+}
