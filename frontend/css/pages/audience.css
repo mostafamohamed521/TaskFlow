@@ -1,0 +1,14 @@
+.audience{background:var(--bg-section);padding:clamp(56px,6vw,80px) 0 clamp(72px,8vw,120px);transition:background .25s}
+.audience header{text-align:center;max-width:720px;margin:0 auto 48px}
+h2{font-size:clamp(28px,3vw,38px);font-weight:700;letter-spacing:-.02em;color:var(--heading)}
+.audience header p{margin:12px 0 0;color:var(--text);font-size:17px}
+.cards{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:24px}
+.card{display:flex;flex-direction:column;align-items:flex-start;padding:32px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--tf-radius-lg);transition:box-shadow .2s}
+.card:hover{box-shadow:0 12px 30px rgba(0,0,0,.10)}
+.badge{width:60px;height:60px;border-radius:50%;background:var(--badge-bg);color:var(--badge-fg);display:grid;place-items:center;margin-bottom:20px}
+.card h3{font-size:20px;font-weight:600;color:var(--heading)}
+.card p{margin:8px 0 22px;max-width:340px;font-size:15px;line-height:1.6;color:var(--text)}
+.more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;font-size:15px;color:var(--link)}
+.more:hover{color:var(--link-hover)}
+@media (max-width:1100px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
