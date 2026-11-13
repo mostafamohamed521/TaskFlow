@@ -1,0 +1,179 @@
+/* ========================================
+   NOTIFICATION SETTINGS
+======================================== */
+
+.tf-channels {
+    grid-template-columns: auto minmax(13rem, 1fr) auto;
+
+    margin: 0;
+
+    border: 0;
+    border-bottom: 1px solid var(--tf-app-row-border);
+}
+
+.tf-channels legend {
+    float: left;
+
+    padding: 0;
+}
+
+.tf-channels legend + .tf-setting-row__text {
+    clear: left;
+}
+
+.tf-channel-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.tf-channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    min-height: 3.125rem;
+    padding: 0 1rem;
+
+    border: 1.5px solid var(--tf-app-card-border);
+    border-radius: 0.75rem;
+
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    color: var(--tf-text-primary);
+    background-color: var(--tf-app-card);
+
+    cursor: pointer;
+}
+
+.tf-channel svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-channel .tf-checkbox__input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.375rem;
+}
+
+.tf-channel .tf-checkbox__input::after {
+    width: 1rem;
+    height: 1rem;
+}
+
+.tf-channel:has(.tf-checkbox__input:checked) {
+    border-color: #2E7547;
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-channel--disabled {
+    color: var(--tf-text-muted);
+    cursor: not-allowed;
+}
+
+.tf-channel__note {
+    display: block;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    color: var(--tf-text-muted);
+}
+
+.tf-notify-list {
+    margin: 0 0 1rem;
+    padding: 0;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 1rem;
+
+    list-style: none;
+}
+
+.tf-notify-row {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+
+    padding: 0.625rem 1rem 0.625rem 1.25rem;
+}
+
+.tf-notify-row + .tf-notify-row {
+    border-top: 1px solid var(--tf-app-row-border);
+}
+
+.tf-notify-row__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-notify-row__title {
+    margin: 0;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-notify-row__text {
+    margin: 0.125rem 0 0;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-notify-row .tf-switch__input {
+    width: 3.75rem;
+    height: 2rem;
+}
+
+.tf-notify-row .tf-switch__input::after {
+    top: 0.25rem;
+    left: 0.25rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-notify-row .tf-switch__input:checked::after {
+    transform: translateX(1.75rem);
+}
+
+.tf-tip {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0.875rem 1.25rem;
+
+    border-radius: 0.875rem;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-primary);
+    background-color: var(--tf-tint-green-soft);
+}
+
+.tf-tip svg {
+    flex: none;
+
+    width: 1.75rem;
+    height: 1.75rem;
+
+    color: var(--tf-olive);
+}
+
+.tf-tip strong {
+    font-size: 1.3rem;
+
+    color: var(--tf-olive);
+}
