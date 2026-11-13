@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="tf-auth-root">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="robots" content="noindex" />
+
+        <title>Sign In — TaskFlow</title>
+
+        <link rel="icon" href="../../public/assets/branding/logo-mark.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../../css/foundation/tokens.css" />
+        <link rel="stylesheet" href="../../css/foundation/base.css" />
+        <link rel="stylesheet" href="../../css/layouts/auth-layout.css" />
+        <link rel="stylesheet" href="../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../css/components/form-fields.css" />
+        <link rel="stylesheet" href="../../css/components/form-feedback.css" />
+        <link rel="stylesheet" href="../../css/pages/auth/login.css" />
+        <link rel="stylesheet" href="../../css/responsive/auth-responsive.css" />
+    </head>
+
+    <body>
+        <div class="tf-auth tf-auth--split">
+            <aside class="tf-auth__brand">
+                <a class="tf-brand" href="../../index.html" aria-label="TaskFlow home">
+                    <img
+                        class="tf-brand__mark"
+                        src="../../public/assets/branding/logo-mark.png"
+                        width="92"
+                        height="112"
+                        alt=""
+                    />
+
+                    <span class="tf-brand__text" aria-hidden="true">
+                        <span class="tf-brand__name">Task<span>Flow</span></span>
+                        <span class="tf-brand__tagline">Plan &middot; Organize &middot; Achieve</span>
+                    </span>
+                </a>
+
+                <div class="tf-auth__brand-copy">
+                    <h2 class="tf-auth__brand-title">
+                        Turn Your Ideas<br />
+                        Into <em>Progress</em>
+                    </h2>
+
+                    <p class="tf-auth__brand-text">
+                        TaskFlow helps you plan, organize, and achieve your goals &mdash; whether you&rsquo;re working alone, with a team, or with clients.
+                    </p>
+                </div>
+
+                <img
+                    class="tf-auth__illustration"
+                    src="../../public/assets/illustrations/auth/login.png"
+                    width="1196"
+                    height="1040"
+                    alt=""
+                />
+            </aside>
+
+            <main class="tf-auth__panel" id="main-content">
+                <div class="tf-auth__content">
+                    <nav class="tf-auth-tabs" aria-label="Account">
+                        <a class="tf-auth-tabs__link" href="login.html" aria-current="page">Sign In</a>
+                        <a class="tf-auth-tabs__link" href="register.html">Create Account</a>
+                    </nav>
+
+                    <header class="tf-auth__header">
+                        <h1 class="tf-auth__title">Welcome Back!</h1>
+
+                        <p class="tf-auth__subtitle">
+                            Sign in to your account to continue.
+                        </p>
+                    </header>
+
+                    <form id="login-form" class="tf-form tf-login-form" novalidate>
+                        <div
+                            id="login-alert"
+                            class="tf-alert tf-alert--error"
+                            role="alert"
+                            hidden
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M10.3 3.9 2.4 17.7A2 2 0 0 0 4.1 20.7h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
+                                <path d="M12 9.5v4.5" />
+                                <path d="M12 17.2v.1" />
+                            </svg>
+
+                            <div>
+                                <strong class="tf-alert__title" data-alert-title>We couldn't sign you in</strong>
+                                <span data-alert-message></span>
+                            </div>
+                        </div>
+
+                        <div class="tf-field">
+                            <label class="tf-visually-hidden" for="login-email">
+                                Email Address
+                            </label>
+
+                            <div class="tf-input-wrap">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                                    <path d="m3 7 9 6 9-6" />
+                                </svg>
+
+                                <input
+                                    id="login-email"
+                                    class="tf-input"
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email Address"
+                                    autocomplete="email"
+                                    required
+                                    aria-describedby="login-email-error"
+                                />
+                            </div>
+
+                            <p class="tf-field__error" id="login-email-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-field">
+                            <label class="tf-visually-hidden" for="login-password">
+                                Password
+                            </label>
+
+                            <div class="tf-input-wrap">
+                                <svg class="tf-input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+                                    <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+                                </svg>
+
+                                <input
+                                    id="login-password"
+                                    class="tf-input tf-input--has-toggle"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    autocomplete="current-password"
+                                    required
+                                    aria-describedby="login-password-error"
+                                />
+
+                                <button
+                                    class="tf-password-toggle"
+                                    type="button"
+                                    data-password-toggle="login-password"
+                                    aria-controls="login-password"
+                                    aria-pressed="false"
+                                    aria-label="Show password"
+                                >
+                                    <svg class="tf-icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    <svg class="tf-icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M9.9 5.2A10.4 10.4 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-2.9 3.9M6.6 6.6A17.4 17.4 0 0 0 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6" />
+                                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+                                        <path d="m3 3 18 18" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <p class="tf-field__error" id="login-password-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="tf-form__row">
+                            <label class="tf-checkbox" for="login-remember">
+                                <input
+                                    id="login-remember"
+                                    class="tf-checkbox__input"
+                                    type="checkbox"
+                                    name="remember"
+                                    checked
+                                />
+
+                                <span>Remember me</span>
+                            </label>
+
+                            <a class="tf-link tf-link--underline tf-login-form__forgot" href="forgot-password.html">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <button
+                            class="tf-button tf-button--primary tf-button--block"
+                            type="submit"
+                        >
+
+                            <span class="tf-button__label">Sign In</span>
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 12h15" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </button>
+                    </form>
+
+                    <hr class="tf-auth__divider" />
+
+                    <p class="tf-auth__switch">
+                        Don&rsquo;t have an account?
+                        <a class="tf-link tf-link--underline" href="register.html">Sign Up</a>
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="../../js/pages/auth/login.js"></script>
+    </body>
+</html>
