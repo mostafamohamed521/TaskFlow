@@ -1,0 +1,107 @@
+/* ========================================
+   STATUS PAGES
+   Email Verified, Password Reset Success,
+   Session Expired, Access Denied.
+======================================== */
+
+.tf-status-page .tf-auth__title {
+    margin-top: 0.25rem;
+}
+
+.tf-status-page__text {
+    margin: 2rem 0 2.875rem;
+
+    font-size: 1.35rem;
+    line-height: 1.65;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-status-page .tf-button--block {
+    min-height: 4.875rem;
+}
+
+.tf-status-page__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.125rem;
+}
+
+.tf-status-page__loading {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+
+    font-size: 1.1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-spinner--dark {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    border-color: rgba(46, 125, 50, 0.2);
+    border-top-color: var(--tf-olive);
+}
+
+
+/* ========================================
+   HERO ILLUSTRATION + STACKED ACTIONS
+   (Session Expired, Access Denied)
+======================================== */
+
+.tf-status-hero {
+    display: block;
+
+    width: min(100%, 28rem);
+    height: auto;
+    margin: 0 auto 0.5rem;
+}
+
+.tf-status-page .tf-status-page__text {
+    margin: 1.5rem 0 2.5rem;
+
+    font-size: 1.55rem;
+    line-height: 1.6;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-status-page__stack {
+    display: grid;
+    gap: 1.25rem;
+
+    width: min(100%, 37.5rem);
+    margin: 0 auto;
+}
+
+.tf-status-page__stack .tf-button {
+    min-height: 4.5rem;
+
+    font-size: 1.65rem;
+}
+
+.tf-auth--onboarding .tf-status-page .tf-auth__title {
+    font-size: 4.25rem;
+}
+
+@media (max-width: 560px) {
+    .tf-auth--onboarding .tf-status-page .tf-auth__title {
+        font-size: 2.4rem;
+    }
+
+    .tf-status-page .tf-status-page__text {
+        font-size: 1.1rem;
+    }
+
+    .tf-status-page__text br {
+        display: none;
+    }
+
+    .tf-status-page__stack .tf-button {
+        min-height: 3.5rem;
+
+        font-size: 1.2rem;
+    }
+}
