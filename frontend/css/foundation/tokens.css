@@ -1,0 +1,183 @@
+/* ========================================
+   DESIGN TOKENS
+   Light theme is the default. The public site
+   also supports a dark theme. Authentication and
+   onboarding pages are light-only (approved designs).
+======================================== */
+
+:root {
+    /* Brand palette */
+    --tf-sage: #4CAF7B;
+    --tf-olive: #2E7D32;
+    --tf-beige: #F5EFE6;
+    --tf-terracotta: #C96F4A;
+    --tf-charcoal: #1F2937;
+    --tf-slate: #64748B;
+    --tf-offwhite: #FCFAF6;
+    --tf-forest: #123B31;
+    --tf-forest-deep: #0D2C26;
+
+    /* Typography and layout */
+    --tf-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --tf-container: 1320px;
+    --tf-gutter: clamp(20px, 4vw, 64px);
+    --tf-radius-md: 16px;
+    --tf-radius-lg: 24px;
+
+    /* Public site semantic colors */
+    --bg-page: #FCFAF6;
+    --bg-hero: #FAF4EA;
+    --bg-section: #FBF7F0;
+    --heading: #0D2C26;
+    --text: #243B35;
+    --text-soft: #64748B;
+    --accent: #4CAF7B;
+    --link: #0F5B3F;
+    --link-hover: #2E7D32;
+    --border: rgba(31, 41, 55, 0.10);
+    --glass-bg: rgba(252, 250, 246, 0.55);
+    --glass-bg-scrolled: rgba(252, 250, 246, 0.82);
+    --glass-border: rgba(255, 255, 255, 0.72);
+    --glass-shadow: 0 10px 35px rgba(20, 43, 35, 0.06);
+    --card-bg: rgba(255, 255, 255, 0.35);
+    --badge-bg: #DDEBDD;
+    --badge-fg: #0F5B3F;
+    --btn-outline: #0F5B3F;
+    --btn-outline-hover: rgba(15, 91, 63, 0.07);
+    --halo: #F6EEDF;
+    --surface: #FFFFFF;
+    --surface-2: #F5EFE6;
+}
+
+[data-theme="dark"] {
+    --bg-page: #0A231E;
+    --bg-hero: #0D2C26;
+    --bg-section: #0A231E;
+    --heading: #F5EFE6;
+    --text: #C5D6CE;
+    --text-soft: #93A8A0;
+    --accent: #5CC38D;
+    --link: #7FD6A5;
+    --link-hover: #A6E8C3;
+    --border: rgba(245, 239, 230, 0.12);
+    --glass-bg: rgba(13, 44, 38, 0.55);
+    --glass-bg-scrolled: rgba(13, 44, 38, 0.85);
+    --glass-border: rgba(245, 239, 230, 0.14);
+    --glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    --card-bg: rgba(245, 239, 230, 0.04);
+    --badge-bg: rgba(76, 175, 123, 0.18);
+    --badge-fg: #7FD6A5;
+    --btn-outline: #5CC38D;
+    --btn-outline-hover: rgba(92, 195, 141, 0.12);
+    --halo: #123B31;
+    --surface: #123B31;
+    --surface-2: #0D2C26;
+
+    color-scheme: dark;
+}
+
+
+/* ========================================
+   AUTHENTICATION + ONBOARDING TOKENS
+======================================== */
+
+:root {
+    /* Surfaces */
+    --tf-panel-bg: #FAF5F0;
+    --tf-panel-blob: #F4E6D6;
+    --tf-brand-bg: #123B31;
+    --tf-brand-bg-deep: #0D2C26;
+    --tf-brand-wave: #2C5E45;
+    --tf-brand-wave-light: #4C7C5C;
+
+    /* Text */
+    --tf-ink: #0E2A22;
+    --tf-text-primary: #1F2D29;
+    --tf-text-secondary: #4B5A55;
+    --tf-text-muted: #77837E;
+    --tf-text-on-brand: #F5EFE6;
+    --tf-mint: #A8D49F;
+
+    /* Lines and fills */
+    --tf-border-field: #DCD3C7;
+    --tf-border-soft: #E8E0D5;
+    --tf-input-bg: #FDFAF6;
+    --tf-input-bg-readonly: #F1ECE5;
+    --tf-tint-green: #DDEED8;
+    --tf-tint-green-soft: #EEF5EA;
+    --tf-tint-peach: #FBE9DC;
+    --tf-tint-slate: #E6EAEE;
+    --tf-tint-lilac: #F1E9F8;
+    --tf-success: #2E7D32;
+    --tf-danger: #B42318;
+    --tf-danger-bg: #FDEDEB;
+    --tf-warning: #9A5B13;
+    --tf-warning-bg: #FDF3E4;
+    --tf-info-bg: #F1ECE4;
+
+    /* Buttons */
+    --tf-button-gradient: linear-gradient(180deg, #2E7547 0%, #1D5733 100%);
+    --tf-button-gradient-hover: linear-gradient(180deg, #2A6B41 0%, #174A2B 100%);
+    --tf-button-shadow: 0 0.625rem 1.375rem rgba(18, 59, 49, 0.18);
+
+    /* Sizes */
+    --tf-input-height: 4.5rem;
+    --tf-button-height: 4.375rem;
+    --tf-radius-sm: 0.625rem;
+    --tf-radius-field: 0.875rem;
+    --tf-radius-button: 1rem;
+    --tf-radius-card: 1.25rem;
+
+    /* Focus */
+    --tf-focus-ring: 0 0 0 0.25rem rgba(76, 175, 123, 0.22);
+}
+
+
+/* ========================================
+   APP (SETTINGS) TOKENS
+   Light values; dark values below apply only to
+   app pages (html.tf-app-root), never to auth.
+======================================== */
+
+:root {
+    --tf-app-bg: #FBF6F0;
+    --tf-app-card: rgba(255, 255, 255, 0.62);
+    --tf-app-card-solid: #FFFDFA;
+    --tf-app-card-border: #EDE4D8;
+    --tf-app-row-border: #EEE6DC;
+    --tf-app-shadow: 0 0.75rem 2rem rgba(31, 41, 55, 0.06);
+    --tf-app-sidebar-active: linear-gradient(90deg, #2F7A47 0%, #3F8C57 100%);
+    --tf-danger-soft: #FCE9E6;
+    --tf-danger-border: #E5A9A0;
+}
+
+.tf-app-root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --tf-app-bg: #0F1F1A;
+    --tf-app-card: rgba(255, 255, 255, 0.04);
+    --tf-app-card-solid: #16291F;
+    --tf-app-card-border: rgba(245, 239, 230, 0.12);
+    --tf-app-row-border: rgba(245, 239, 230, 0.10);
+    --tf-app-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.35);
+    --tf-danger-soft: rgba(180, 35, 24, 0.16);
+    --tf-danger-border: rgba(240, 140, 125, 0.5);
+
+    --tf-panel-bg: #0F1F1A;
+    --tf-panel-blob: rgba(76, 175, 123, 0.08);
+    --tf-ink: #F5EFE6;
+    --tf-text-primary: #E7E1D8;
+    --tf-text-secondary: #B5C2BC;
+    --tf-text-muted: #8FA199;
+    --tf-border-field: rgba(245, 239, 230, 0.18);
+    --tf-border-soft: rgba(245, 239, 230, 0.10);
+    --tf-input-bg: rgba(255, 255, 255, 0.04);
+    --tf-input-bg-readonly: rgba(255, 255, 255, 0.07);
+    --tf-tint-green: rgba(76, 175, 123, 0.18);
+    --tf-tint-green-soft: rgba(76, 175, 123, 0.10);
+    --tf-tint-peach: rgba(201, 111, 74, 0.16);
+    --tf-info-bg: rgba(255, 255, 255, 0.06);
+    --tf-olive: #7FD6A5;
+    --tf-danger: #F08C7D;
+    --tf-danger-bg: rgba(180, 35, 24, 0.18);
+}
