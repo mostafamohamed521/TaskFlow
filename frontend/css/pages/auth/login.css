@@ -1,0 +1,44 @@
+/* ========================================
+   LOGIN PAGE
+   Only the differences from the shared auth layout.
+======================================== */
+
+.tf-login-form {
+    gap: 1.5rem;
+}
+
+.tf-login-form .tf-input {
+    min-height: 5rem;
+}
+
+.tf-login-form .tf-form__row {
+    margin-top: 0;
+    padding: 0 2px;
+}
+
+.tf-login-form .tf-button {
+    min-height: 4.25rem;
+    margin-top: 0.75rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.tf-login-form__forgot {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+
+.tf-auth--split .tf-auth-tabs {
+    margin-bottom: 3.75rem;
+}
+
+.tf-login-form {
+    margin-top: 2.75rem;
+}
+
+.tf-auth--split .tf-auth__divider {
+    margin: 3.5rem 0 2.25rem;
+}
