@@ -1,0 +1,63 @@
+/* ========================================
+   CREATE WORKSPACE
+======================================== */
+
+.tf-workspace-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
+    gap: 2rem;
+}
+
+.tf-workspace-layout__fields {
+    display: grid;
+    gap: 1.125rem;
+
+    padding-right: 2rem;
+
+    border-right: 1px solid var(--tf-border-soft);
+}
+
+.tf-fieldset {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.tf-fieldset legend {
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+.tf-workspace-layout__fields {
+    gap: 0.875rem;
+}
+
+.tf-workspace-layout .tf-textarea {
+    min-height: 5.75rem;
+}
+
+.tf-workspace-layout .tf-form__grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.tf-workspace-layout .tf-form__grid .tf-select {
+    font-size: 1.15rem;
+
+    padding-right: 2.75rem;
+    background-position: right 0.875rem center;
+}
+
+.tf-workspace-layout .tf-form__grid .tf-input-wrap__icon + .tf-input {
+    padding-left: 3.75rem;
+}
+
+.tf-workspace-layout .tf-form__grid .tf-input-wrap__icon {
+    left: 1.125rem;
+}
+
+.tf-workspace-layout .tf-field__error:empty,
+.tf-workspace-layout .tf-field__meta {
+    margin-top: -0.25rem;
+}
