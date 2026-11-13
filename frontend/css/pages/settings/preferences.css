@@ -1,0 +1,56 @@
+/* ========================================
+   APP PREFERENCES
+======================================== */
+
+.tf-pref-select {
+    width: 21rem;
+}
+
+.tf-setting-row__control .tf-pref-select + .tf-pref-select {
+    width: 10rem;
+}
+
+.tf-preferences-form .tf-setting-row__control {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    max-width: 32rem;
+}
+
+.tf-pref-example {
+    flex-basis: 100%;
+
+    margin: 0;
+
+    font-size: 0.95rem;
+    text-align: right;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-theme-switch {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.tf-segmented--theme .tf-segmented__label {
+    min-height: 2.75rem;
+    padding: 0 1.125rem;
+
+    font-size: 1.15rem;
+}
+
+/* Theme uses the outlined "selected" look from the design */
+.tf-segmented--theme .tf-segmented__input:checked + .tf-segmented__label {
+    color: var(--tf-olive);
+    background: var(--tf-tint-green-soft);
+    box-shadow: inset 0 0 0 1.5px var(--tf-sage);
+}
+
+.tf-preferences-form .tf-form-actions {
+    margin-top: 2.5rem;
+}
