@@ -1,0 +1,179 @@
+/* ========================================
+   PROFILE SUMMARY CARD
+   One component for every Settings page.
+======================================== */
+
+.tf-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1.875rem 1rem 1.25rem;
+
+    border: 1px solid var(--tf-app-card-border);
+    border-radius: 1.375rem;
+
+    text-align: center;
+
+    background-color: var(--tf-app-card);
+    box-shadow: var(--tf-app-shadow);
+}
+
+.tf-profile-card__photo {
+    position: relative;
+
+    margin-bottom: 1.125rem;
+}
+
+.tf-profile-card__avatar {
+    display: grid;
+    place-items: center;
+
+    width: 11.5rem;
+    height: 11.5rem;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    color: #FFFFFF;
+    background: linear-gradient(160deg, #2E7547 0%, #123B31 100%);
+}
+
+.tf-profile-card__avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.tf-profile-card__camera {
+    position: absolute;
+    right: 0;
+    bottom: 0.25rem;
+
+    display: grid;
+    place-items: center;
+
+    width: 3.125rem;
+    height: 3.125rem;
+
+    border: 3px solid var(--tf-app-bg);
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background: var(--tf-button-gradient);
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.tf-profile-card__camera svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-profile-card__camera:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-profile-card__name {
+    margin: 0;
+
+    font-size: 1.65rem;
+    font-weight: 800;
+    word-break: break-word;
+
+    color: var(--tf-ink);
+}
+
+.tf-profile-card__email {
+    max-width: 100%;
+    margin: 0.375rem 0 0.75rem;
+
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.375rem 1rem;
+
+    border-radius: 999px;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    color: var(--tf-olive);
+    background-color: var(--tf-tint-green);
+}
+
+.tf-role-badge svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-profile-card__divider {
+    width: 100%;
+    height: 1px;
+    margin: 1.25rem 0 0.75rem;
+
+    border: 0;
+
+    background-color: var(--tf-app-row-border);
+}
+
+.tf-profile-card__facts {
+    display: grid;
+    gap: 0.25rem;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: left;
+}
+
+.tf-profile-card__fact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    min-height: 3.25rem;
+    padding: 0 0.5rem;
+
+    font-size: 1.2rem;
+    word-break: break-word;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-profile-card__fact svg {
+    flex: none;
+
+    width: 1.75rem;
+    height: 1.75rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-profile-card__fact[hidden] {
+    display: none;
+}
+
+.tf-profile-card .tf-settings-menu {
+    width: 100%;
+
+    text-align: left;
+}
