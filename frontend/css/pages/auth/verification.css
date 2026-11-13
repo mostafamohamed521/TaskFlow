@@ -1,0 +1,81 @@
+/* ========================================
+   VERIFY EMAIL PAGE
+======================================== */
+
+.tf-verify .tf-status-icon {
+    margin-bottom: 1.625rem;
+}
+
+.tf-verify__lead {
+    margin: 1.375rem 0 0.875rem;
+
+    font-size: 1.4rem;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-email-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0.875rem 1.75rem;
+
+    border-radius: var(--tf-radius-field);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+    background-color: var(--tf-tint-green);
+}
+
+.tf-email-chip svg {
+    width: 1.875rem;
+    height: 1.875rem;
+
+    color: var(--tf-olive);
+}
+
+.tf-verify__text {
+    margin: 1.375rem 0 2.25rem;
+
+    font-size: 1.3rem;
+    line-height: 1.55;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-verify .tf-button {
+    min-height: 4.375rem;
+}
+
+.tf-verify__resend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.125rem;
+
+    margin: 2.125rem 0 0;
+
+    font-size: 1.2rem;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-verify__resend .tf-text-button {
+    font-size: 1.25rem;
+}
+
+.tf-verify__change {
+    margin: 0.5rem 0 0;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-verify__divider {
+    margin: 1.625rem 0 2rem;
+}
