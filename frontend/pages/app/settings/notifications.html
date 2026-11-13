@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="tf-app-root">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="robots" content="noindex" />
+
+        <title>Notification Settings — TaskFlow</title>
+
+        <link rel="icon" href="../../../public/assets/branding/logo-mark.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <script src="../../../js/core/theme-init.js"></script>
+
+        <link rel="stylesheet" href="../../../css/foundation/tokens.css" />
+        <link rel="stylesheet" href="../../../css/foundation/base.css" />
+        <link rel="stylesheet" href="../../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../../css/components/form-fields.css" />
+        <link rel="stylesheet" href="../../../css/components/password-fields.css" />
+        <link rel="stylesheet" href="../../../css/components/form-feedback.css" />
+        <link rel="stylesheet" href="../../../css/components/toggles.css" />
+        <link rel="stylesheet" href="../../../css/components/segmented-control.css" />
+        <link rel="stylesheet" href="../../../css/components/modal.css" />
+        <link rel="stylesheet" href="../../../css/layouts/app-shell.css" />
+        <link rel="stylesheet" href="../../../css/layouts/settings-layout.css" />
+        <link rel="stylesheet" href="../../../css/components/settings-navigation.css" />
+        <link rel="stylesheet" href="../../../css/components/profile-summary.css" />
+        <link rel="stylesheet" href="../../../css/pages/settings/notifications.css" />
+        <link rel="stylesheet" href="../../../css/responsive/settings-responsive.css" />
+    </head>
+
+    <body>
+        <a class="tf-visually-hidden" href="#settings-content">Skip to content</a>
+
+        <div class="tf-app">
+            <aside class="tf-sidebar" id="app-sidebar" aria-label="Main navigation">
+                <a class="tf-sidebar__brand" href="../../../index.html" aria-label="TaskFlow home">
+                    <img src="../../../public/assets/branding/logo-mark.png" width="50" height="60" alt="" />
+
+                    <span aria-hidden="true">
+                        <span class="tf-sidebar__brand-name">Task<span>Flow</span></span>
+                        <span class="tf-sidebar__tagline">Plan &middot; Organize &middot; Achieve</span>
+                    </span>
+                </a>
+
+                <nav>
+                    <ul class="tf-sidebar__nav">
+                        <li>
+                            <a class="tf-sidebar__link" href="../../../pages/app/dashboard/index.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3.5 11 12 4l8.5 7" />
+                                    <path d="M5.5 9.5V20h13V9.5" />
+                                    <path d="M10 20v-5.5h4V20" />
+                                </svg>
+                                Overview
+                            </a>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="m12 3 9 5-9 5-9-5Z" />
+                                    <path d="m3 12.5 9 5 9-5" />
+                                    <path d="m3 16.5 9 5 9-5" />
+                                </svg>
+                                Projects
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3.5" y="3.5" width="17" height="17" rx="3" />
+                                    <path d="m8 12.3 3 3 5.5-6" />
+                                </svg>
+                                Tasks
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+                                    <path d="M3.5 10h17" />
+                                    <path d="M8 3v4M16 3v4" />
+                                </svg>
+                                Calendar
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="13.5" r="7.5" />
+                                    <path d="M12 9.5v4l2.5 1.5" />
+                                    <path d="M9.5 2.5h5" />
+                                </svg>
+                                Time Tracking
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3.5" />
+                                    <path d="M2.5 20c.6-3.4 3-5.3 6.5-5.3s5.9 1.9 6.5 5.3" />
+                                    <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8" />
+                                    <path d="M18 14.9c2 .6 3.2 2.2 3.5 5.1" />
+                                </svg>
+                                Team
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="tf-sidebar__link tf-sidebar__link--soon" aria-disabled="true" title="Coming soon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" />
+                                    <path d="M14 3v5h5" />
+                                    <path d="M9 17v-2M12 17v-4M15 17v-6" />
+                                </svg>
+                                Reports
+                                <span class="tf-visually-hidden">(coming soon)</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <a class="tf-sidebar__link" href="../../../pages/app/settings/profile.html" aria-current="page">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z" />
+                                </svg>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="tf-workspace-switch">
+                    <button
+                        class="tf-workspace-switch__button"
+                        type="button"
+                        id="workspace-menu-button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="workspace-menu"
+                    >
+                        <span class="tf-workspace-switch__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="7" width="18" height="13" rx="2.5" />
+                                <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7" />
+                                <path d="M3 12.5h18" />
+                            </svg>
+                        </span>
+
+                        <span class="tf-workspace-switch__text">
+                            <span class="tf-workspace-switch__name" data-shell="workspaceName">My Workspace</span>
+                            <span class="tf-workspace-switch__type" data-shell="workspaceType">Personal</span>
+                        </span>
+
+                        <svg class="tf-workspace-switch__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+
+                    <div class="tf-menu tf-menu--up" id="workspace-menu" hidden>
+                        <div class="tf-menu__header">
+                            <p class="tf-menu__title">Your workspaces</p>
+                        </div>
+
+                        <a class="tf-menu__item tf-menu__item--current" href="../../../pages/app/dashboard/index.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="m5 12.5 4.5 4.5L19 7.5" />
+                            </svg>
+                            <span data-shell="workspaceName">My Workspace</span>
+                        </a>
+
+                        <a class="tf-menu__item" href="../../../pages/onboarding/choose-workspace-type.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            Create a new workspace
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="tf-app__main">
+                <header class="tf-topbar">
+                    <button
+                        class="tf-icon-trigger tf-topbar__menu-button"
+                        type="button"
+                        id="sidebar-toggle"
+                        aria-controls="app-sidebar"
+                        aria-expanded="false"
+                        aria-label="Open navigation"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 7h16M4 12h16M4 17h16" />
+                        </svg>
+                    </button>
+
+                    <form class="tf-search" id="app-search" role="search">
+                        <label class="tf-visually-hidden" for="app-search-input">Search settings</label>
+                        <svg class="tf-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="m20.5 20.5-4.5-4.5" />
+                        </svg>
+
+                        <input
+                            id="app-search-input"
+                            class="tf-search__input"
+                            type="search"
+                            name="query"
+                            placeholder="Search projects, tasks..."
+                            autocomplete="off"
+                            list="app-search-suggestions"
+                        />
+
+                        <datalist id="app-search-suggestions">
+                            <option value="Profile"></option>
+                            <option value="Security"></option>
+                            <option value="Change Password"></option>
+                            <option value="Change Email"></option>
+                            <option value="Preferences"></option>
+                            <option value="Theme"></option>
+                            <option value="Notifications"></option>
+                            <option value="Account Management"></option>
+                            <option value="Data &amp; Privacy"></option>
+                        </datalist>
+                    </form>
+
+                    <div class="tf-topbar__actions">
+                        <button
+                            class="tf-icon-trigger"
+                            type="button"
+                            id="notifications-button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="notifications-menu"
+                            aria-label="Notifications"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z" />
+                                <path d="M10 20.5a2 2 0 0 0 4 0" />
+                            </svg>
+                        </button>
+
+                        <div class="tf-menu" id="notifications-menu" hidden>
+                            <div class="tf-menu__header">
+                                <p class="tf-menu__title">Notifications</p>
+                            </div>
+
+                            <p class="tf-menu__empty">You&rsquo;re all caught up. New activity will appear here.</p>
+                        </div>
+
+                        <span class="tf-topbar__divider" aria-hidden="true"></span>
+
+                        <button
+                            class="tf-avatar-button"
+                            type="button"
+                            id="profile-menu-button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="profile-menu"
+                            aria-label="Open profile menu"
+                        >
+                            <span class="tf-avatar" data-shell="avatar">U</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <div class="tf-menu" id="profile-menu" hidden>
+                            <div class="tf-menu__header">
+                                <p class="tf-menu__title" data-shell="name">User</p>
+                                <p class="tf-menu__subtitle" data-shell="email"></p>
+                            </div>
+
+                            <a class="tf-menu__item" href="../../../pages/app/settings/profile.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="8" r="4" />
+                                    <path d="M4.5 20.5c.8-3.6 3.7-5.5 7.5-5.5s6.7 1.9 7.5 5.5" />
+                                </svg>
+                                My Profile
+                            </a>
+
+                            <a class="tf-menu__item" href="../../../pages/app/settings/account.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="m12 3 9 5-9 5-9-5Z" />
+                                    <path d="m3 12.5 9 5 9-5" />
+                                    <path d="m3 16.5 9 5 9-5" />
+                                </svg>
+                                Account Management
+                            </a>
+
+                            <button class="tf-menu__item tf-menu__item--danger" type="button" id="sign-out-button">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M10 3.5H5.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2H10" />
+                                    <path d="M20.5 12h-11" />
+                                    <path d="m16.5 8 4 4-4 4" />
+                                </svg>
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="tf-settings" id="settings-content">
+                    <header class="tf-settings__header">
+                        <div>
+                            <h1 class="tf-settings__title">My Profile</h1>
+                            <p class="tf-settings__subtitle">Manage your personal information, security, and preferences.</p>
+                        </div>
+                    </header>
+
+                    <div class="tf-settings__grid">
+                        <aside class="tf-profile-card" aria-label="Profile summary">
+                            <div class="tf-profile-card__photo">
+                                <div class="tf-profile-card__avatar" data-summary="avatar" aria-hidden="true">U</div>
+
+                                <a class="tf-profile-card__camera" href="profile.html#profile-photo-input" title="Change photo">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" />
+                                        <circle cx="12" cy="13" r="3.5" />
+                                    </svg>
+                                    <span class="tf-visually-hidden">Change profile photo</span>
+                                </a>
+                            </div>
+
+                            <h2 class="tf-profile-card__name" data-summary="name">User</h2>
+                            <p class="tf-profile-card__email" data-summary="email"></p>
+
+                            <span class="tf-role-badge" data-summary="roleBadge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="m3 7.5 4.5 4 4.5-6 4.5 6 4.5-4-2 11H5Z" />
+                                </svg>
+                                <span data-summary="role">Member</span>
+                            </span>
+
+                            <hr class="tf-profile-card__divider" />
+
+                            <ul class="tf-profile-card__facts">
+                                <li class="tf-profile-card__fact" data-fact="workspaceName">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M4.5 21V4.5a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5V21" />
+                                        <path d="M15.5 9H18a1.5 1.5 0 0 1 1.5 1.5V21" />
+                                        <path d="M3 21h18" />
+                                        <path d="M8 7h1M11.5 7h1M8 10.5h1M11.5 10.5h1M8 14h1M11.5 14h1" />
+                                    </svg>
+                                    <span data-summary="workspaceName"></span>
+                                </li>
+
+                                <li class="tf-profile-card__fact" data-fact="workspaceType">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="3" y="7" width="18" height="13" rx="2.5" />
+                                        <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7" />
+                                        <path d="M3 12.5h18" />
+                                    </svg>
+                                    <span data-summary="workspaceType"></span>
+                                </li>
+
+                                <li class="tf-profile-card__fact" data-fact="location">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M12 21.5s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z" />
+                                        <circle cx="12" cy="9.5" r="2.5" />
+                                    </svg>
+                                    <span data-summary="location"></span>
+                                </li>
+
+                                <li class="tf-profile-card__fact" data-fact="timeZone">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9.5" />
+                                        <path d="M2.5 12h19" />
+                                        <path d="M12 2.5c2.6 2.6 3.9 5.8 3.9 9.5S14.6 18.9 12 21.5C9.4 18.9 8.1 15.7 8.1 12S9.4 5.1 12 2.5Z" />
+                                    </svg>
+                                    <span data-summary="timeZone"></span>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <div class="tf-settings__main">
+                            <nav class="tf-settings-tabs" aria-label="Settings sections">
+                                <a class="tf-settings-tabs__link" href="profile.html">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M4.5 20.5c.8-3.6 3.7-5.5 7.5-5.5s6.7 1.9 7.5 5.5" />
+                                    </svg>
+                                    Profile
+                                </a>
+
+                                <a class="tf-settings-tabs__link" href="security.html">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+                                        <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+                                    </svg>
+                                    Security
+                                </a>
+
+                                <a class="tf-settings-tabs__link" href="preferences.html">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" />
+                                        <circle cx="16" cy="6" r="2" />
+                                        <circle cx="10" cy="12" r="2" />
+                                        <circle cx="18" cy="18" r="2" />
+                                    </svg>
+                                    Preferences
+                                </a>
+
+                                <a class="tf-settings-tabs__link" href="notifications.html" aria-current="page">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z" />
+                                        <path d="M10 20.5a2 2 0 0 0 4 0" />
+                                    </svg>
+                                    Notifications
+                                </a>
+                            </nav>
+
+
+                            <section class="tf-settings-card" aria-labelledby="notifications-title">
+                                <header class="tf-section-head">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z" />
+                                        <path d="M10 20.5a2 2 0 0 0 4 0" />
+                                    </svg>
+
+                                    <div>
+                                        <h2 class="tf-section-head__title" id="notifications-title">Notification Settings</h2>
+                                        <p class="tf-section-head__text">Choose what updates you want to receive and how.</p>
+                                    </div>
+                                </header>
+
+                                <form id="notifications-form" class="tf-notifications-form" novalidate>
+                                    <fieldset class="tf-setting-row tf-setting-row--compact tf-channels">
+                                        <span class="tf-setting-row__icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                                                <path d="m3 7 9 6 9-6" />
+                                            </svg>
+                                        </span>
+
+                                        <div>
+                                            <legend class="tf-setting-row__title">Notification Channels</legend>
+                                            <p class="tf-setting-row__text">Select how you&rsquo;d like to receive notifications.</p>
+                                        </div>
+
+                                        <div class="tf-channel-list">
+                                            <label class="tf-channel" for="channel-email">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                                                    <path d="m3 7 9 6 9-6" />
+                                                </svg>
+                                                <span>Email</span>
+                                                <input
+                                                    id="channel-email"
+                                                    class="tf-checkbox__input"
+                                                    type="checkbox"
+                                                    name="channel-email"
+                                                />
+                                            </label>
+
+                                            <label class="tf-channel tf-channel--disabled" for="channel-push">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
+                                                    <path d="M11 18.5h2" />
+                                                </svg>
+                                                <span>Mobile Push<span class="tf-channel__note">Not available yet</span></span>
+                                                <input
+                                                    id="channel-push"
+                                                    class="tf-checkbox__input"
+                                                    type="checkbox"
+                                                    name="channel-push"
+                                                    disabled
+                                                />
+                                            </label>
+
+                                            <label class="tf-channel" for="channel-inApp">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <rect x="2.5" y="4" width="19" height="12.5" rx="2" />
+                                                    <path d="M8 20.5h8M12 16.5v4" />
+                                                </svg>
+                                                <span>In-App</span>
+                                                <input
+                                                    id="channel-inApp"
+                                                    class="tf-checkbox__input"
+                                                    type="checkbox"
+                                                    name="channel-inApp"
+                                                />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="tf-setting-row tf-setting-row--compact">
+                                        <span class="tf-setting-row__icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="m12 3 9 5-9 5-9-5Z" />
+                                                <path d="m3 12.5 9 5 9-5" />
+                                                <path d="m3 16.5 9 5 9-5" />
+                                            </svg>
+                                        </span>
+
+                                        <div>
+                                            <h3 class="tf-setting-row__title">Notification Types</h3>
+                                            <p class="tf-setting-row__text">Turn on or off notifications for different activities.</p>
+                                        </div>
+                                    </div>
+
+                                    <ul class="tf-notify-list">
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <rect x="3.5" y="3.5" width="17" height="17" rx="3" />
+                                                <path d="m8 12.3 3 3 5.5-6" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-taskUpdates-title">Task Updates</p>
+                                                <p class="tf-notify-row__text" id="notify-taskUpdates-text">New tasks, assignments, due dates, and status changes.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-taskUpdates"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="taskUpdates"
+                                                    aria-labelledby="notify-taskUpdates-title"
+                                                    aria-describedby="notify-taskUpdates-text"
+                                                />
+                                            </span>
+                                        </li>
+
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-projectUpdates-title">Project Updates</p>
+                                                <p class="tf-notify-row__text" id="notify-projectUpdates-text">Changes in your projects, members, and milestones.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-projectUpdates"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="projectUpdates"
+                                                    aria-labelledby="notify-projectUpdates-title"
+                                                    aria-describedby="notify-projectUpdates-text"
+                                                />
+                                            </span>
+                                        </li>
+
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <circle cx="9" cy="8" r="3.5" />
+                                                <path d="M2.5 20c.6-3.4 3-5.3 6.5-5.3s5.9 1.9 6.5 5.3" />
+                                                <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8" />
+                                                <path d="M18 14.9c2 .6 3.2 2.2 3.5 5.1" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-teamActivity-title">Team Activity</p>
+                                                <p class="tf-notify-row__text" id="notify-teamActivity-text">Invitations, role changes, and team updates.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-teamActivity"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="teamActivity"
+                                                    aria-labelledby="notify-teamActivity-title"
+                                                    aria-describedby="notify-teamActivity-text"
+                                                />
+                                            </span>
+                                        </li>
+
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.4A8.5 8.5 0 1 1 20.5 11.5Z" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-mentions-title">Mentions &amp; Comments</p>
+                                                <p class="tf-notify-row__text" id="notify-mentions-text">When someone mentions you or comments on your work.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-mentions"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="mentions"
+                                                    aria-labelledby="notify-mentions-title"
+                                                    aria-describedby="notify-mentions-text"
+                                                />
+                                            </span>
+                                        </li>
+
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+                                                <path d="M3.5 10h17" />
+                                                <path d="M8 3v4M16 3v4" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-calendar-title">Calendar &amp; Events</p>
+                                                <p class="tf-notify-row__text" id="notify-calendar-text">Reminders for upcoming meetings and deadlines.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-calendar"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="calendar"
+                                                    aria-labelledby="notify-calendar-title"
+                                                    aria-describedby="notify-calendar-text"
+                                                />
+                                            </span>
+                                        </li>
+
+                                        <li class="tf-notify-row">
+                                            <svg class="tf-notify-row__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M5 20v-6M10 20V9M15 20v-8M20 20V4" />
+                                            </svg>
+
+                                            <div>
+                                                <p class="tf-notify-row__title" id="notify-reports-title">Reports &amp; Summaries</p>
+                                                <p class="tf-notify-row__text" id="notify-reports-text">Weekly progress, time tracking, and project reports.</p>
+                                            </div>
+
+                                            <span class="tf-switch">
+                                                <input
+                                                    id="notify-reports"
+                                                    class="tf-switch__input"
+                                                    type="checkbox"
+                                                    role="switch"
+                                                    name="reports"
+                                                    aria-labelledby="notify-reports-title"
+                                                    aria-describedby="notify-reports-text"
+                                                />
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <p class="tf-tip">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="9.5" />
+                                            <path d="M12 11v5.5" />
+                                            <path d="M12 7.6v.1" />
+                                        </svg>
+                                        <strong>Tip</strong>
+                                        <span>Email delivery starts once TaskFlow is connected to its server. Your choices are saved now.</span>
+                                    </p>
+                                </form>
+
+                                <div class="tf-form-actions">
+                                    <p class="tf-form-actions__status" id="notifications-status" role="status" aria-live="polite"></p>
+
+                                    <button class="tf-button tf-button--secondary" type="button" data-action="cancel"
+                                        form="notifications-form">
+                                        <span class="tf-button__label">Cancel</span>
+                                    </button>
+
+                                    <button
+                                        class="tf-button tf-button--primary"
+                                        type="submit"
+                                        form="notifications-form"
+                                    >
+                                        <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="m5 12.5 4.5 4.5L19 7.5" />
+                                        </svg>
+                                        <span class="tf-button__label">Save Changes</span>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+
+        <script type="module" src="../../../js/pages/settings/notifications.js"></script>
+    </body>
+</html>
