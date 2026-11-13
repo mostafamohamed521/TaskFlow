@@ -1,0 +1,147 @@
+/* ========================================
+   REGISTER PAGE
+   Denser stacked fields, password strength,
+   social sign-in row.
+======================================== */
+
+.tf-register .tf-auth-tabs {
+    width: min(100%, 27.375rem);
+    margin-bottom: 1.75rem;
+}
+
+.tf-register .tf-auth-tabs__link {
+    min-height: 3.125rem;
+    font-size: 1.2rem;
+}
+
+.tf-register .tf-auth__header {
+    margin-bottom: 1.5rem;
+}
+
+.tf-register .tf-auth__title {
+    font-size: 2.9rem;
+}
+
+.tf-register .tf-auth__subtitle {
+    margin-top: 0.375rem;
+    font-size: 1.25rem;
+}
+
+.tf-register__form {
+    gap: 1rem;
+}
+
+.tf-register__form .tf-field {
+    gap: 0.375rem;
+}
+
+.tf-register__strength .tf-strength {
+    margin-top: -0.375rem;
+}
+
+.tf-register__strength .tf-strength__bars {
+    width: min(48%, 18.75rem);
+}
+
+.tf-register__strength .tf-strength__bar {
+    height: 0.5rem;
+}
+
+.tf-register__strength .tf-strength__label {
+    font-size: 0.95rem;
+}
+
+.tf-register__terms {
+    gap: 0.875rem;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tf-register__terms .tf-link {
+    font-weight: 500;
+}
+
+.tf-register__form .tf-button {
+    min-height: 4.25rem;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   "OR CONTINUE WITH" + SOCIAL BUTTONS
+======================================== */
+
+.tf-or {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    margin: 1.625rem 0 1.625rem;
+
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-or::before,
+.tf-or::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background-color: var(--tf-border-field);
+}
+
+.tf-socials {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.375rem;
+
+    padding: 0 1.75rem;
+}
+
+.tf-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    min-height: 3.75rem;
+
+    border: 1px solid var(--tf-border-soft);
+    border-radius: var(--tf-radius-field);
+
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: var(--tf-text-primary);
+    background-color: #FCF8F2;
+    box-shadow: 0 0.25rem 0.75rem rgba(31, 41, 55, 0.05);
+
+    cursor: pointer;
+}
+
+.tf-social svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-social:hover {
+    border-color: var(--tf-border-field);
+    background-color: #FFFFFF;
+}
+
+.tf-social:focus-visible {
+    outline: none;
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-register__switch {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
