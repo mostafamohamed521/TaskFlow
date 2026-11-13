@@ -1,0 +1,150 @@
+/* ========================================
+   ONBOARDING LAYOUT
+   Brand rail copy, page header, shared field sizing
+   and the footer action row used by every onboarding step.
+======================================== */
+
+.tf-auth--onboarding .tf-auth__brand-copy {
+    margin-top: auto;
+    margin-bottom: 7.5rem;
+    max-width: 22rem;
+}
+
+.tf-auth--onboarding .tf-auth__brand-title {
+    font-size: 2.75rem;
+    line-height: 1.12;
+}
+
+.tf-auth--onboarding .tf-auth__brand-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.tf-onboarding__accent {
+    display: block;
+
+    width: 3.875rem;
+    height: 0.25rem;
+    margin-top: 1.625rem;
+
+    border-radius: 62.4375rem;
+
+    background: linear-gradient(90deg, var(--tf-mint), #E4C46B);
+}
+
+.tf-onboarding {
+    display: flex;
+    flex-direction: column;
+}
+
+.tf-onboarding .tf-auth__title {
+    font-size: 3.75rem;
+}
+
+.tf-onboarding__header {
+    margin: 1.625rem 0 2.5rem;
+}
+
+.tf-onboarding__header--left {
+    margin: 1.375rem 0 1.5rem;
+
+    text-align: left;
+}
+
+.tf-onboarding__header--left .tf-auth__title {
+    font-size: 3.35rem;
+}
+
+.tf-onboarding__header--left .tf-auth__subtitle {
+    margin-top: 2px;
+    font-size: 1.3rem;
+}
+
+.tf-onboarding__form {
+    display: grid;
+    gap: 1.375rem;
+}
+
+.tf-onboarding .tf-input {
+    min-height: 3.875rem;
+    font-size: 1.3rem;
+}
+
+.tf-onboarding .tf-input-wrap__icon {
+    left: 1.375rem;
+}
+
+.tf-onboarding .tf-input-wrap__icon + .tf-input {
+    padding-left: 4.625rem;
+}
+
+.tf-onboarding .tf-field__label {
+    font-size: 1.35rem;
+}
+
+.tf-onboarding .tf-field {
+    gap: 0.5rem;
+}
+
+
+/* ========================================
+   FOOTER ACTIONS
+======================================== */
+
+.tf-onboarding__footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin-top: 1.75rem;
+    padding-top: 1.625rem;
+
+    border-top: 1px solid var(--tf-border-soft);
+}
+
+.tf-onboarding__footer .tf-button--primary {
+    margin-left: auto;
+}
+
+.tf-onboarding__footer--end {
+    border-top: 0;
+}
+
+.tf-onboarding__footnote {
+    margin: 0 0 0 auto;
+
+    font-size: 1.05rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-onboarding__footnote + .tf-button--primary {
+    margin-left: 0;
+}
+
+.tf-onboarding__skip {
+    margin-left: auto;
+    font-size: 1.2rem;
+}
+
+.tf-onboarding__skip + .tf-button--primary {
+    margin-left: 0;
+}
+
+.tf-button--small {
+    min-height: 3.25rem;
+    padding: 0 1.375rem;
+
+    font-size: 1.1rem;
+}
+
+.tf-button--small svg {
+    width: 1.375rem;
+    height: 1.375rem;
+}
+
+.tf-onboarding__form:has(.tf-workspace-layout) .tf-onboarding__footer,
+.tf-onboarding__form:has(.tf-invite-layout) .tf-onboarding__footer {
+    margin-top: 0.375rem;
+    padding-top: 1.25rem;
+}
