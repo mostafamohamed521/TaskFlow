@@ -1,0 +1,146 @@
+/* ========================================
+   SELECTION CARDS
+   Radio-group cards (Choose Workspace Type).
+======================================== */
+
+.tf-type-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.875rem;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.tf-type-card {
+    --tf-card-tint: var(--tf-tint-green);
+    --tf-card-wave: #A9D3A0;
+    --tf-card-icon: var(--tf-olive);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 22.25rem;
+    padding: 1.875rem 0.875rem 5.625rem;
+
+    border: 1.5px solid var(--tf-border-soft);
+    border-radius: 1.125rem;
+
+    text-align: center;
+
+    background:
+        radial-gradient(120% 60% at 30% 118%, var(--tf-card-wave) 0 46%, transparent 47%),
+        rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.tf-type-card--peach {
+    --tf-card-tint: #F8E3D1;
+    --tf-card-wave: #F1D2B6;
+    --tf-card-icon: #8A5A2B;
+}
+
+.tf-type-card--terracotta {
+    --tf-card-tint: #F6D7C6;
+    --tf-card-wave: #E9AA8B;
+    --tf-card-icon: #B4552F;
+}
+
+.tf-type-card--slate {
+    --tf-card-tint: var(--tf-tint-slate);
+    --tf-card-wave: #C6CED8;
+    --tf-card-icon: #2F4256;
+}
+
+.tf-type-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 1.625rem rgba(31, 41, 55, 0.08);
+}
+
+.tf-type-card__input {
+    position: absolute;
+    opacity: 0;
+}
+
+.tf-type-card:has(.tf-type-card__input:checked) {
+    border-color: var(--tf-sage);
+    border-width: 2px;
+    box-shadow: 0 0.875rem 1.875rem rgba(46, 125, 50, 0.12);
+}
+
+.tf-type-card:has(.tf-type-card__input:focus-visible) {
+    box-shadow: var(--tf-focus-ring);
+}
+
+.tf-type-card__check {
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+
+    display: none;
+    place-items: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background: var(--tf-button-gradient);
+}
+
+.tf-type-card__check svg {
+    width: 1.375rem;
+    height: 1.375rem;
+}
+
+.tf-type-card__input:checked ~ .tf-type-card__check {
+    display: grid;
+}
+
+.tf-type-card__icon {
+    display: block;
+
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1.25rem;
+
+    border-radius: 50%;
+}
+
+.tf-type-card__title {
+    margin-bottom: 0.875rem;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-type-card__text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+
+    color: var(--tf-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-type-card {
+        transition: none;
+    }
+
+    .tf-type-card:hover {
+        transform: none;
+    }
+}
