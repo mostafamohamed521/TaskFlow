@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="tf-auth-root">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="robots" content="noindex" />
+
+        <title>Session Expired — TaskFlow</title>
+
+        <link rel="icon" href="../../public/assets/branding/logo-mark.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../../css/foundation/tokens.css" />
+        <link rel="stylesheet" href="../../css/foundation/base.css" />
+        <link rel="stylesheet" href="../../css/layouts/auth-layout.css" />
+        <link rel="stylesheet" href="../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../css/components/form-fields.css" />
+        <link rel="stylesheet" href="../../css/components/form-feedback.css" />
+        <link rel="stylesheet" href="../../css/layouts/onboarding-layout.css" />
+        <link rel="stylesheet" href="../../css/pages/auth/auth-status.css" />
+        <link rel="stylesheet" href="../../css/responsive/auth-responsive.css" />
+        <link rel="stylesheet" href="../../css/responsive/onboarding-responsive.css" />
+    </head>
+
+    <body>
+        <div class="tf-auth tf-auth--onboarding">
+            <aside class="tf-auth__brand">
+                <a class="tf-brand" href="../../index.html" aria-label="TaskFlow home">
+                    <img
+                        class="tf-brand__mark"
+                        src="../../public/assets/branding/logo-mark.png"
+                        width="92"
+                        height="112"
+                        alt=""
+                    />
+
+                    <span class="tf-brand__text" aria-hidden="true">
+                        <span class="tf-brand__name">Task<span>Flow</span></span>
+                        <span class="tf-brand__tagline">Plan &middot; Organize &middot; Achieve</span>
+                    </span>
+                </a>
+
+                <div class="tf-auth__brand-copy">
+                    <h2 class="tf-auth__brand-title">
+                        Session<br />
+                        Expired
+                    </h2>
+
+                <span class="tf-onboarding__accent" aria-hidden="true"></span>
+
+                    <p class="tf-auth__brand-text">
+                        Your session has ended<br />
+                        due to inactivity. For your<br />
+                        security, please sign in<br />
+                        again.
+                    </p>
+                </div>
+
+                <img
+                    class="tf-auth__illustration"
+                    src="../../public/assets/illustrations/auth/session-expired.png"
+                    width="1196"
+                    height="1040"
+                    alt=""
+                />
+            </aside>
+
+            <main class="tf-auth__panel" id="main-content">
+                <div class="tf-auth__content tf-auth__content--center tf-status-page">
+                    <img
+                        class="tf-status-hero"
+                        src="../../public/assets/illustrations/auth/session-expired-hero.png"
+                        width="860"
+                        height="690"
+                        alt=""
+                    />
+
+                    <h1 class="tf-auth__title">Session Expired</h1>
+
+                    <p class="tf-status-page__text">
+                        Your session has ended due to inactivity for a long time.<br />
+                        Please sign in again to continue using TaskFlow.
+                    </p>
+
+                    <div class="tf-status-page__stack">
+                        <a
+                            class="tf-button tf-button--primary tf-button--block"
+                            href="login.html"
+                        >
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14 3.5h4.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H14" />
+                                <path d="M3.5 12h11" />
+                                <path d="m10.5 8 4 4-4 4" />
+                                <path d="M3.5 9V3.5H8M3.5 15v5.5H8" />
+                            </svg>
+
+                            <span class="tf-button__label">Sign In Again</span>
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 12h15" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </a>
+
+                        <a
+                            class="tf-button tf-button--secondary tf-button--block"
+                            href="../../index.html"
+                        >
+                            <svg class="tf-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3.5 11 12 4l8.5 7" />
+                                <path d="M5.5 9.5V20h13V9.5" />
+                                <path d="M10 20v-5.5h4V20" />
+                            </svg>
+
+                            <span class="tf-button__label">Go to Home</span>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+    </body>
+</html>
