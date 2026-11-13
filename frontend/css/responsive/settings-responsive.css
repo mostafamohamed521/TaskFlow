@@ -1,0 +1,295 @@
+/* ========================================
+   SETTINGS RESPONSIVE RULES
+   Desktop: sidebar + profile card + content.
+   Tablet: profile card stacks above content.
+   Mobile: sidebar becomes an off-canvas drawer,
+   tabs scroll horizontally, controls go full width.
+======================================== */
+
+/* Narrow desktops */
+@media (max-width: 1280px) {
+    .tf-pref-select {
+        width: 16rem;
+    }
+
+    .tf-search {
+        width: min(16rem, 28vw);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .tf-settings__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-profile-card {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 1.5rem;
+        align-items: center;
+
+        text-align: left;
+    }
+
+    .tf-profile-card__photo {
+        grid-row: 1 / span 4;
+
+        margin: 0;
+    }
+
+    .tf-profile-card__avatar {
+        width: 7rem;
+        height: 7rem;
+
+        font-size: 2.25rem;
+    }
+
+    .tf-profile-card__camera {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .tf-role-badge {
+        justify-self: start;
+    }
+
+    .tf-profile-card__divider,
+    .tf-profile-card__facts,
+    .tf-profile-card nav {
+        grid-column: 1 / -1;
+    }
+
+    .tf-profile-card__facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tf-workspace-summary-card {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-workspace-summary-card__art {
+        display: none;
+    }
+}
+
+/* Tablet portrait and below: off-canvas sidebar */
+@media (max-width: 1024px) {
+    .tf-app {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-sidebar {
+        position: fixed;
+        inset: 0 auto 0 0;
+        z-index: 50;
+
+        width: min(19rem, 85vw);
+        margin: 0;
+        padding-right: 1.5rem;
+
+        transform: translateX(-100%);
+        transition: transform 220ms ease;
+    }
+
+    .tf-app--nav-open .tf-sidebar {
+        transform: none;
+        box-shadow: 1rem 0 3rem rgba(0, 0, 0, 0.35);
+    }
+
+    .tf-app__main {
+        padding: 1rem 1.25rem 2rem;
+
+        border-radius: 0;
+    }
+
+    .tf-icon-trigger.tf-topbar__menu-button {
+        display: grid;
+    }
+
+    .tf-breadcrumbs {
+        display: none;
+    }
+
+    .tf-settings-tabs {
+        display: flex;
+
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .tf-settings-tabs__link {
+        flex: 0 0 auto;
+    }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+    .tf-search {
+        width: auto;
+        flex: 1;
+    }
+
+    .tf-topbar {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .tf-topbar__divider,
+    .tf-avatar-button > svg {
+        display: none;
+    }
+
+    .tf-settings__header {
+        gap: 1rem;
+    }
+
+    .tf-settings__header-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .tf-settings__title {
+        font-size: 2rem;
+    }
+
+    .tf-settings__subtitle {
+        font-size: 1.05rem;
+    }
+
+    .tf-settings-card {
+        padding: 1.125rem 1rem;
+    }
+
+    .tf-profile-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        text-align: center;
+    }
+
+    .tf-profile-card__photo {
+        grid-row: auto;
+    }
+
+    .tf-role-badge {
+        justify-self: center;
+    }
+
+    .tf-profile-card__facts {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-section-head > svg {
+        width: 2.125rem;
+        height: 2.125rem;
+    }
+
+    .tf-section-head__title {
+        font-size: 1.45rem;
+    }
+
+    .tf-setting-row,
+    .tf-danger-zone,
+    .tf-workspace-summary-card__body {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .tf-setting-row__control {
+        grid-column: 1 / -1;
+
+        align-items: stretch;
+    }
+
+    .tf-danger-zone > .tf-button,
+    .tf-workspace-summary-card__body > .tf-button {
+        grid-column: 1 / -1;
+    }
+
+    .tf-preferences-form .tf-setting-row__control,
+    #privacy-form .tf-setting-row__control {
+        justify-content: stretch;
+        max-width: none;
+    }
+
+    .tf-pref-select,
+    .tf-setting-row__control .tf-pref-select + .tf-pref-select,
+    #privacy-form .tf-pref-select {
+        width: 100%;
+    }
+
+    .tf-pref-example {
+        text-align: left;
+    }
+
+    .tf-segmented--theme {
+        width: 100%;
+    }
+
+    .tf-session-list {
+        grid-column: 1 / -1;
+    }
+
+    .tf-session {
+        grid-template-columns: auto minmax(0, 1fr) 2.75rem;
+        padding: 0.75rem;
+    }
+
+    .tf-session__time {
+        grid-column: 2;
+        grid-row: 2;
+
+        font-size: 0.9rem;
+    }
+
+    .tf-channel-list {
+        justify-content: stretch;
+    }
+
+    .tf-channel {
+        flex: 1 1 100%;
+    }
+
+    .tf-notify-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        padding: 0.75rem;
+    }
+
+    .tf-notify-row__icon {
+        display: none;
+    }
+
+    .tf-tip {
+        flex-wrap: wrap;
+    }
+
+    .tf-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .tf-form-actions .tf-button--primary,
+    .tf-form-actions .tf-button--secondary {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .tf-form-actions__status {
+        margin: 0;
+        text-align: center;
+    }
+
+    .tf-profile-form {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-requirements {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-sidebar {
+        transition: none;
+    }
+}
