@@ -1,0 +1,92 @@
+/* ========================================
+   PROGRESS STEPPER
+   Four-step onboarding indicator. The current step is
+   marked with aria-current and bold text, not color alone.
+======================================== */
+
+.tf-stepper-wrap {
+    width: min(100%, 56.25rem);
+    margin: 0 auto;
+}
+
+.tf-stepper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tf-stepper__step {
+    position: relative;
+
+    display: grid;
+    justify-items: center;
+    gap: 0.625rem;
+
+    text-align: center;
+}
+
+/* Connector line to the next step */
+.tf-stepper__step:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 1.4375rem;
+    left: calc(50% + 1.75rem);
+
+    width: calc(100% - 3.5rem);
+    height: 0.1875rem;
+
+    border-radius: 62.4375rem;
+
+    background-color: #CFCAC2;
+}
+
+.tf-stepper__step--complete:not(:last-child)::after {
+    background-color: #1F6A3A;
+}
+
+.tf-stepper__marker {
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border: 2px solid #A9A49D;
+    border-radius: 50%;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+    background-color: var(--tf-panel-bg);
+}
+
+.tf-stepper__marker svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tf-stepper__step--complete .tf-stepper__marker,
+.tf-stepper__step--current .tf-stepper__marker {
+    border-color: transparent;
+
+    color: #FFFFFF;
+    background: var(--tf-button-gradient);
+}
+
+.tf-stepper__label {
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    color: var(--tf-text-primary);
+}
+
+.tf-stepper__step--current .tf-stepper__label {
+    font-weight: 700;
+    color: var(--tf-ink);
+}
