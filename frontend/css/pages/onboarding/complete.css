@@ -1,0 +1,142 @@
+/* ========================================
+   GET STARTED (COMPLETE)
+======================================== */
+
+.tf-onboarding--complete .tf-auth__title {
+    margin-top: 0.375rem;
+}
+
+.tf-onboarding__success {
+    display: block;
+
+    width: 21rem;
+    height: auto;
+    margin: 1.125rem auto 0;
+}
+
+.tf-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+
+    margin: 1.5rem 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tf-feature-card {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+
+    padding: 1.125rem 0.875rem 1.375rem;
+
+    border: 1.5px solid var(--tf-border-soft);
+    border-radius: 1.125rem;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.tf-feature-card__icon {
+    display: grid;
+    place-items: center;
+
+    width: 4.875rem;
+    height: 4.875rem;
+    margin-bottom: 0.875rem;
+
+    border-radius: 50%;
+
+    color: var(--tf-olive);
+    background-color: var(--tf-tint-green);
+}
+
+.tf-feature-card__icon--peach {
+    color: #A3502E;
+    background-color: #F8DCCB;
+}
+
+.tf-feature-card__icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.tf-feature-card__title {
+    margin: 0 0 0.5rem;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    color: var(--tf-ink);
+}
+
+.tf-feature-card__text {
+    margin: 0;
+
+    font-size: 1.15rem;
+    line-height: 1.4;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-onboarding__finish {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 3rem;
+}
+
+.tf-onboarding__finish .tf-button {
+    width: min(100%, 38.25rem);
+    min-height: 4.5rem;
+
+    font-size: 1.55rem;
+}
+
+
+/* Workspace summary (data from the onboarding state) */
+
+.tf-workspace-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin: 1.75rem 0 0;
+    padding: 1rem 1.5rem;
+
+    border: 1px solid var(--tf-border-soft);
+    border-radius: var(--tf-radius-card);
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tf-workspace-summary__item {
+    display: grid;
+    gap: 0.25rem;
+
+    padding: 0 1rem;
+
+    text-align: center;
+}
+
+.tf-workspace-summary__item + .tf-workspace-summary__item {
+    border-left: 1px solid var(--tf-border-soft);
+}
+
+.tf-workspace-summary dt {
+    font-size: 1rem;
+
+    color: var(--tf-text-secondary);
+}
+
+.tf-workspace-summary dd {
+    margin: 0;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    word-break: break-word;
+
+    color: var(--tf-ink);
+}
