@@ -1,0 +1,15 @@
+/* ========================================
+   DATA & PRIVACY
+======================================== */
+
+.tf-settings__main > .tf-settings-card + .tf-settings-card {
+    margin-top: 0;
+}
+
+#privacy-form .tf-pref-select {
+    width: 18rem;
+}
+
+#privacy-form .tf-setting-row__control {
+    flex-direction: row;
+}
